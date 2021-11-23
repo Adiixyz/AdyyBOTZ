@@ -124,6 +124,7 @@ ${x} #sange
 ${x} #nolep
 ${x} #jahat
 ${x} #baik
+${x} #wangy
 
 Storage
 ${x} #addimg
