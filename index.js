@@ -496,6 +496,10 @@ if (budy.includes("Adyy")){
 reply("adyy disini")
 }
 
+if (budy.includes("cekprefix")){
+reply("multi prefix")
+}
+
 if (budy.includes("adyy")){
 reply("gw disini")
 }
@@ -833,7 +837,8 @@ ${x} #pakgirl
 ${x} #sange
 ${x} #nolep
 ${x} #jahat
-${x} #baik`
+${x} #baik
+${x} #wangy`
 katalog(menu)
 break
 
