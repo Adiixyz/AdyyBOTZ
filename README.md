@@ -1,11 +1,23 @@
 <div align="center">
-<img src="https://github.com/Adiixyz.png" alt="dy" width="300" />
+<img src="https://github.com/Adiixyz.png" alt="dy" width="600" />
 </div>
 
 <h1 align="center">ADYYBOTZ</h1>
 
 -------
 # Installation
+
+#### Deploy to Heroku
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Adiixyz/selfbotz)
+
+#### Heroku Buildpack
+| BuildPack | LINK |
+|--------|--------|
+| **FFMPEG** |[nih](https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest) |
+| **WEBP** | [nih](https://github.com/clhuang/heroku-buildpack-webp-binaries) |
+
+#### Run On Repl.It
+[![Run on Repl.It](https://repl.it/badge/github/Adiixyz/AdyyBOTZ)](https://repl.it/github/Adiixyz/AdyyBOTZ)
 
 ## Termux
 ```cmd
@@ -17,6 +29,7 @@
 > git clone https://github.com/Adiixyz/AdyyBOTZ.git
 > cd AdyyBOTZ
 > npm i
+> npm i qrcode
 > node run
 ```
 
@@ -29,6 +42,7 @@
 > git clone https://github.com/Adiixyz/AdyyBOTZ.git
 > cd AdyyBOTZ
 > npm i
+> npm i qrcode
 > node run
 ```
 ### Scan QR and enjoyyyyyy
