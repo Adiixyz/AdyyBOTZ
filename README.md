@@ -157,6 +157,7 @@
 * `nolep`
 * `jahat`
 * `baik`
+* `wangy`
 
 ### STORAGE
 * `addimg`
