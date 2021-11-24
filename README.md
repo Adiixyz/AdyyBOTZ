@@ -95,6 +95,8 @@
 * `loli`
 * `husbu`
 * `anime`
+* `elaina`
+* `neko`
 
 ### OTHER
 * `sherelock`
@@ -135,6 +137,7 @@
 * `ytmp3`
 * `ytmp4`
 * `ytsearch`
+* `ytdl`
 
 ### STC CMD
 * `addcmd`
@@ -158,6 +161,7 @@
 * `jahat`
 * `baik`
 * `wangy`
+* `pemenang`
 
 ### STORAGE
 * `addimg`
@@ -172,3 +176,8 @@
 * `getvideo`
 * `listvideo`
 * `addvideo`
+
+### `NEW!` WALLPAPER
+* `wallpaperislam`
+* `wallpapercode`
+* `wallpapertech`
