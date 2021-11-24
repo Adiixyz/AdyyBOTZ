@@ -720,7 +720,7 @@ ${x} #q
 ${x} #view [read once]
 ${x} #term [code]
 ${x} #upswteks
-${} #upswvideo
+${x} #upswvideo
 ${x} #upswimage
 ${x} #mode [button]
 ${x} #setprefix [buttton]
