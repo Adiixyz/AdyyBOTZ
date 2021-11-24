@@ -508,12 +508,26 @@ if (budy.includes("bot")){
 reply("aktif")
 }
 
+let settingstatus = 0;
+if (new Date() * 1 - settingstatus > 1000) {
+  let _uptime = process.uptime() * 1000;
+  let uptime = waktu(_uptime);
+  await conn.setStatus(`Aktif Selama ${uptime}`).catch((_) => _);
+  settingstatus = new Date() * 1;
+}
+
 //TAMPILAN LOG!
 if (!isGroup && isCmd) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b[1;37m]', time, color(command), 'from', color(sender.split('@')[0]), 'args :', color(args.length))
 if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b[1;37m]', time, color(command), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
 if (!mek.key.fromMe && selfnya === true ) return
 //************************[COMMADO]************************\\
 switch(command || commando) {
+case 'isbaileys': 
+case 'bail': 
+case 'baileys':
+reply(`${mek.quoted.isBaileys}`)
+break
+
 case 'status':
 anu = `Mode Saat Ini : ${selfnya ? ' SELF' : ' PUBLIC'}`
 sendButMessage(
@@ -678,6 +692,10 @@ case'buttonmenu':
                               "rowId": `wallpapermenu`
                            },
                            {
+                              "title": "Game Menu",
+                              "rowId": `gamemenu`
+                           },
+                           {
                               "title": "Fun Menu",
                               "rowId": `funmenu`
                            },
@@ -746,13 +764,13 @@ ${x} #demote
 ${x} #revoke
 ${x} #getname
 ${x} #groupinfo
-${x} #linkgc`
+${x} #linkgc
+${x} #isbaileys`
 katalog(menu)
 break
 
 case'animemenu':
-menu =`Anime Menu:
-_Tempat untuk anime lovers:)_
+menu =`\`\`\`「 ANIME MENU ツ 」\`\`\`
 
 ${x} #waifu
 ${x} #loli
@@ -764,8 +782,7 @@ katalog(menu)
 break
 
 case'othermenu':
-menu =`Other Menu:
-_Yo ndak tau kok tanya saia?_
+menu =`\`\`\`「 OTHER MENU ツ 」\`\`\`
 
 ${x} #sherelock
 ${x} #listgroup
@@ -786,8 +803,7 @@ katalog(menu)
 break
 
 case'stickermenu':
-menu =`Sticker Menu:
-_Tempat bot buat stiker_
+menu =`\`\`\`「 STICKER MENU ツ 」\`\`\`
 
 ${x} #take
 ${x} #stiker
@@ -801,8 +817,7 @@ katalog(menu)
 break
 
 case'downloadermenu':
-menu =`Downloader Menu:
-_Download lah apa kalian mau_
+menu =`\`\`\`「 DOWNLOADER MENU ツ 」\`\`\`
 
 ${x} #playstore
 ${x} #play
@@ -819,27 +834,24 @@ ${x} #ytdl`
 katalog(menu)
 break
 
-case'downloadermenu':
-menu =`
+case'wallpapermenu':
+menu =`\`\`\`「 WALLPAPER MENU ツ 」\`\`\`
 
-${x} #playstore
-${x} #play
-${x} #ytdl
-${x} #tiktok
-${x} #ig [link]
-${x} #video
-${x} #igstory
-${x} #lirik
-${x} #ytmp3
-${x} #ytmp4
-${x} #ytsearch
-${x} #ytdl`
+${x} #wallpapercode
+${x} #wallpapertech
+${x} #wallpaperislam`
+katalog(menu)
+break
+
+case'gamemenu':
+menu =`\`\`\`「 GAME MENU ツ 」\`\`\`
+
+${x} #suit batu/kertas/gunting`
 katalog(menu)
 break
 
 case'funmenu':
-menu =`Fun Menu:
-_Sentiasa fun:v_
+menu =`\`\`\`「 FUN MENU ツ 」\`\`\`
 
 ${x} #readmore
 ${x} #jadian
@@ -862,8 +874,7 @@ katalog(menu)
 break
 
 case'storagemenu':
-menu =`Storage Menu:
-_huh?_
+menu =`\`\`\`「 STORAGE MENU ツ 」\`\`\`
 
 ${x} #addimg
 ${x} #getimg
@@ -964,6 +975,37 @@ type: 1,
 );
 }
 break;
+
+case 'suit':
+  if (args.length < 1) return reply('Pilih gunting/batu/kertas')
+					if (args[0] === 'gunting' ) {
+					  gunting = [
+					    "Kamu *Gunting*\nAku *Kertas*\nKamu Menang 🥳",
+					    "Kamu *Gunting*\nAku *Batu*\nKamu Kalah 🙁",
+					    "Kamu *Gunting*\nAku *Gunting*\nKita Seri 🙂"
+					    ]
+					  gunawan = gunting[Math.floor(Math.random() * gunting.length)]
+					  reply(gunawan)
+					} else if (args[0] === 'kertas') {
+					  kertas = [
+					    "Kamu *Kertas*\nAku *Batu*\nKamu Menang 🥳",
+					    "Kamu *Kertas*\nAku *Gunting*\nKamu Kalah 🙁",
+					    "Kamu *Kertas*\nAku *Kertas*\nKita Seri 🙂"
+					    ]
+					  kera = kertas[Math.floor(Math.random() * kertas.length)]
+						reply(kera)
+					} else if (args[0] === 'batu') {
+					  batu = [
+					    "Kamu *Batu*\nAku *Gunting*\nKamu Menang 🥳",
+					    "Kamu *Batu*\nAku *Kertas*\nKamu Kalah 🙁",
+					    "Kamu *Batu*\nAku *Batu*\nKita Seri 🙂"
+					    ]
+					  bata = batu[Math.floor(Math.random() * batu.length)]
+					  reply(bata)
+					} else {
+					  reply('Pilih gunting/batu/kertas')
+					}
+break
 
 case 'wangy':
                 if (!q) return
