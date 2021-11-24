@@ -4,6 +4,11 @@ ${x} #neko
 ${x} #elaina
 ${x} #ytdl
 ${x} #pemenang
+${x} #wallpapercode
+${x} #wallpapertech
+${x} #wallpaperislam
+${x} #isbaileys
+${x} #suit
 
 Simple Menu
 ${x} #ownermenu
@@ -13,6 +18,8 @@ ${x} #animemenu
 ${x} #othermenu
 ${x} #stickermenu
 ${x} #downloadermenu
+${x} #wallpapermenu
+${x} #gamemenu
 ${x} #funmenu
 ${x} #storagemenu
 
@@ -115,6 +122,14 @@ Set Cmd
 ${x} #addcmd
 ${x} #delcmd
 ${x} #listcmd
+
+Wallpaper
+${x} #wallpapertech
+${x} #wallpapercode
+${x} #wallpaperislam
+
+Game
+${x} #suit
 
 Fun
 ${x} #readmore
