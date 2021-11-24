@@ -674,8 +674,8 @@ case'buttonmenu':
                               "rowId": `downloadermenu`
                            },
                            {
-                              "title": "Set Cmd Menu",
-                              "rowId": ""
+                              "title": "Wallpaper Menu",
+                              "rowId": `wallpapermenu`
                            },
                            {
                               "title": "Fun Menu",
@@ -693,8 +693,7 @@ conn.sendMessage(from, listMsg, MessageType.listMessage, {contextInfo: { mention
 break
 
 case'ownermenu':
-menu =`Owner Menu:
-_Untuk Creator AdyyBot_
+menu =`\`\`\`「 OWNER MENU ツ 」\`\`\`
 
 ${x} > [eval]
 ${x} => [eval async]
@@ -703,7 +702,7 @@ ${x} #q
 ${x} #view [read once]
 ${x} #term [code]
 ${x} #upswteks
-${x} #upswvideo
+${} #upswvideo
 ${x} #upswimage
 ${x} #mode [button]
 ${x} #setprefix [buttton]
@@ -721,8 +720,7 @@ katalog(menu)
 break
 
 case'jadibotmenu':
-menu =`Jadibot Menu:
-_Tempat untuk kalian mau jadibot sementara_
+menu =`\`\`\`「 JADIBOT MENU ツ 」\`\`\`
 
 ${x} #jadibot
 ${x} #stopjadibot
@@ -731,8 +729,7 @@ katalog(menu)
 break
 
 case'groupmenu':
-menu =`Group Menu:
-_Command untuk group_
+menu =`\`\`\`「 GROUP MENU ツ 」\`\`\`
 
 ${x} #kick
 ${x} #add
@@ -822,6 +819,24 @@ ${x} #ytdl`
 katalog(menu)
 break
 
+case'downloadermenu':
+menu =`
+
+${x} #playstore
+${x} #play
+${x} #ytdl
+${x} #tiktok
+${x} #ig [link]
+${x} #video
+${x} #igstory
+${x} #lirik
+${x} #ytmp3
+${x} #ytmp4
+${x} #ytsearch
+${x} #ytdl`
+katalog(menu)
+break
+
 case'funmenu':
 menu =`Fun Menu:
 _Sentiasa fun:v_
@@ -870,7 +885,7 @@ var priivat = conn.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
 let thumbnya = fs.readFileSync(`./media/thumb.jpeg`)
 ruan = process.uptime()
 
-anu =`**AdyyBot*
+anu =`AdyyBot
 
 • Mode : ${selfnya ? 'Self' : 'Public'}
 • Jam : ${time}
@@ -1862,12 +1877,27 @@ prep = await conn.prepareMessageFromContent(from,{buttonsMessage},{quoted: mek})
 conn.relayWAMessage(prep)
 fs.unlinkSync(`./${sender}.jpeg`)
 break
+
+case 'wallpapertech':
+case 'wallpapercode':
+case 'wallpaperislam':
+let waala = (await axios.get(`https://raw.githubusercontent.com/Adiixyz/json/main/${command}.json`)).data
+let wip = waala[Math.floor(Math.random() * (waala.length))]
+fs.writeFileSync(`./${sender}.jpeg`, await getBuffer(wip))
+buttons = [{buttonId: `${command}`,buttonText:{displayText: `➡️Next`},type:1}]
+imageMsg = ( await conn.prepareMessage(from, fs.readFileSync(`./${sender}.jpeg`), 'imageMessage', {thumbnail: Buffer.alloc(0)})).message.imageMessage
+buttonsMessage = {footerText:'© Adyy', imageMessage: imageMsg,
+contentText:`klik Next untuk ${command} selanjutnya`,buttons,headerType:4}
+prep = await conn.prepareMessageFromContent(from,{buttonsMessage},{quoted: mek})
+conn.relayWAMessage(prep)
+fs.unlinkSync(`./${sender}.jpeg`)
+break
               
 case 'husbu':
 case 'waifu':
 let anim = (await axios.get(`https://raw.githubusercontent.com/Arya-was/endak-tau/main/${command}.json`)).data
 let anak = anim[Math.floor(Math.random() * (anim.length))]
-fs.writeFileSync(`./${sender}.jpeg`, await getBuffer(wipi))
+fs.writeFileSync(`./${sender}.jpeg`, await getBuffer(anak))
 buttons = [{buttonId: `${command}`,buttonText:{displayText: `➡️Next`},type:1}]
 imageMsg = ( await conn.prepareMessage(from, fs.readFileSync(`./${sender}.jpeg`), 'imageMessage', {thumbnail: Buffer.alloc(0)})).message.imageMessage
 buttonsMessage = {footerText:'© Adyy', imageMessage: imageMsg,
