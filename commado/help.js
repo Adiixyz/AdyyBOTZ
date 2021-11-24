@@ -1,5 +1,11 @@
 const help = (x) => {
-	return `Simple Menu
+	return `New Feature!
+${x} #neko
+${x} #elaina
+${x} #ytdl
+${x} #pemenang
+
+Simple Menu
 ${x} #ownermenu
 ${x} #jadibotmenu
 ${x} #groupmenu
@@ -7,7 +13,6 @@ ${x} #animemenu
 ${x} #othermenu
 ${x} #stickermenu
 ${x} #downloadermenu
-${x} #setcmdmenu
 ${x} #funmenu
 ${x} #storagemenu
 
@@ -62,6 +67,8 @@ ${x} #waifu
 ${x} #loli
 ${x} #husbu
 ${x} #anime
+${x} #neko
+${x} #elaina
 
 Other
 ${x} #sherelock
@@ -102,6 +109,7 @@ ${x} #lirik
 ${x} #ytmp3
 ${x} #ytmp4
 ${x} #ytsearch
+${x} #ytdl
 
 Set Cmd
 ${x} #addcmd
@@ -125,6 +133,7 @@ ${x} #nolep
 ${x} #jahat
 ${x} #baik
 ${x} #wangy
+${x} #pemenang
 
 Storage
 ${x} #addimg
