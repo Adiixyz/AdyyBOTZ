@@ -760,7 +760,9 @@ _Tempat untuk anime lovers:)_
 ${x} #waifu
 ${x} #loli
 ${x} #husbu
-${x} #anime`
+${x} #neko
+${x} #anime
+${x} #elaina`
 katalog(menu)
 break
 
@@ -815,7 +817,8 @@ ${x} #igstory
 ${x} #lirik
 ${x} #ytmp3
 ${x} #ytmp4
-${x} #ytsearch`
+${x} #ytsearch
+${x} #ytdl`
 katalog(menu)
 break
 
@@ -838,7 +841,8 @@ ${x} #sange
 ${x} #nolep
 ${x} #jahat
 ${x} #baik
-${x} #wangy`
+${x} #wangy
+${x} #pemenang`
 katalog(menu)
 break
 
@@ -1496,7 +1500,7 @@ reply(mess.wait)
 let pin = await hx.pinterest(q)
 let ac = pin[Math.floor(Math.random() * pin.length)]
 let di = await getBuffer(ac)
-await conn.sendMessage(from,di,image,{quoted: mek, caption: `*Pencarian* : ${q}`})
+await conn.sendMessage(from,di,image,{quoted: fkontak, caption: `*Pencarian* : ${q}`})
 break
 
 
@@ -1509,7 +1513,7 @@ let dii = await getBuffer(acc)
 sendButImage(
           from,
           `Next untuk menampilkan hasil *Cecan* lainnya`,
-          `©Seazyc`,
+          `©Adyy`,
           dii,
           [
             {
@@ -1533,7 +1537,7 @@ let diii = await getBuffer(accc)
 sendButImage(
           from,
           `Next untuk menampilkan hasil *Cogan* lainnya`,
-          `©Seazyc`,
+          `© adyy`,
           diii,
           [
             {
@@ -1556,7 +1560,7 @@ let diiii = await getBuffer(acccc)
 sendButImage(
           from,
           `Next untuk menampilkan hasil *Darkjokes* lainnya`,
-          `©Seazyc`,
+          `©Adyy`,
           diiii,
           [
             {
@@ -1843,23 +1847,35 @@ console.log(e)
 reply(`${e}`)
 })
 
-case 'waifu':
+
 case 'loli':
-case 'husbu':
-       
-let wipu = (await axios.get(`https://raw.githubusercontent.com/Arya-was/endak-tau/main/${command}.json`)).data
+case 'neko':
+case 'elaina':
+let wipu = (await axios.get(`https://raw.githubusercontent.com/Adiixyz/json/main/${command}.json`)).data
 let wipi = wipu[Math.floor(Math.random() * (wipu.length))]
 fs.writeFileSync(`./${sender}.jpeg`, await getBuffer(wipi))
 buttons = [{buttonId: `${command}`,buttonText:{displayText: `➡️Next`},type:1}]
 imageMsg = ( await conn.prepareMessage(from, fs.readFileSync(`./${sender}.jpeg`), 'imageMessage', {thumbnail: Buffer.alloc(0)})).message.imageMessage
-buttonsMessage = {footerText:'© Seazyc', imageMessage: imageMsg,
+buttonsMessage = {footerText:'© Adyy', imageMessage: imageMsg,
 contentText:`klik Next untuk ke gambar selanjutnya`,buttons,headerType:4}
 prep = await conn.prepareMessageFromContent(from,{buttonsMessage},{quoted: mek})
 conn.relayWAMessage(prep)
 fs.unlinkSync(`./${sender}.jpeg`)
 break
               
-              
+case 'husbu':
+case 'waifu':
+let anim = (await axios.get(`https://raw.githubusercontent.com/Arya-was/endak-tau/main/${command}.json`)).data
+let anak = anim[Math.floor(Math.random() * (anim.length))]
+fs.writeFileSync(`./${sender}.jpeg`, await getBuffer(wipi))
+buttons = [{buttonId: `${command}`,buttonText:{displayText: `➡️Next`},type:1}]
+imageMsg = ( await conn.prepareMessage(from, fs.readFileSync(`./${sender}.jpeg`), 'imageMessage', {thumbnail: Buffer.alloc(0)})).message.imageMessage
+buttonsMessage = {footerText:'© Adyy', imageMessage: imageMsg,
+contentText:`klik Next untuk ke gambar selanjutnya`,buttons,headerType:4}
+prep = await conn.prepareMessageFromContent(from,{buttonsMessage},{quoted: mek})
+conn.relayWAMessage(prep)
+fs.unlinkSync(`./${sender}.jpeg`)
+break             
      
 case 'revoke':
 if (!isGroupAdmins && !mek.key.fromMe) return reply("Khusus admin");
