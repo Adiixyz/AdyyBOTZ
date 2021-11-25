@@ -496,9 +496,6 @@ if (budy.includes("Adyy")){
 reply("adyy disini")
 }
 
-if (budy.includes("cekprefix")){
-reply("multi prefix")
-}
 
 if (budy.includes("adyy")){
 reply("gw disini")
@@ -585,7 +582,7 @@ mana =`Hi ${pushname}!
 • Auto recording : true
 • Multi Prefix : true
 • No Prefix : false
-• Uptime : ${waktu(kntl)}
+• Uptime : ${waktu(kntl)}`
 sendButImage(from, `${mana}`, `Silahkan pilih salah satu`, thubnya, [
           {
             buttonId: `command`,
