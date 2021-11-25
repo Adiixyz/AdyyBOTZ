@@ -601,7 +601,7 @@ sendButImage(from, `${mana}`, `Silahkan pilih salah satu`, thubnya, [
             },
             type: 1,
           },
-        ], {quoted:fkontak, jpegThumbnail:thubnya});
+        ], {quoted: fkontak});
         break
 
 case'help':
