@@ -593,7 +593,7 @@ sendButImage(from, `${mana}`, `Silahkan pilih salah satu`, thubnya, [
           {
             buttonId: `command`,
             buttonText: {
-              displayText: ALL FITUR`,
+              displayText: `ALL FITUR`,
             },
             type: 1,
           },
