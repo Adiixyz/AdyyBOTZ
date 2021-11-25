@@ -152,6 +152,7 @@ const q = args.join(' ')
 const isCmd = body.startsWith(prefix)
 const botNumber = conn.user.jid
 const botNumberss = conn.user.jid + '@c.us'
+const isOwner = ownernya.includes(sender)
 const isGroup = from.endsWith('@g.us')
 let sender = isGroup ? mek.participant : mek.key.remoteJid
 const totalchat = await conn.chats.all()
@@ -444,7 +445,7 @@ conn.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 }
 switch( evalnya) {
 case'$':
-if (!mek.key.fromMe) return 
+if (!isOwner) return 
 qur = budy.slice(2)
 exec(qur, (err, stdout) => {
 if (err) return reply(`Adyy:~ ${err}`)
@@ -454,7 +455,7 @@ reply(stdout)
 })
 break
 case'=>':
-if (!mek.key.fromMe) return
+if (!isOwner) return
 var konsol = budy.slice(3)
 Return = (sul) => {
 var sat = JSON.stringify(sul, null, 2)
@@ -472,7 +473,7 @@ reply(String(e))
 }
 break
 case'>':
-if (!mek.key.fromMe) return
+if (!isOwner) return
 try {
 return conn.sendMessage(from, JSON.stringify(eval(budy.slice(2)),null,'\t'),text, {quoted: mek})
 } catch(err) {
@@ -496,6 +497,9 @@ if (budy.includes("Adyy")){
 reply("adyy disini")
 }
 
+if (budy.match("@60199782326")){
+reply('Apasih ngetag ngetas owner ku')
+}
 
 if (budy.includes("adyy")){
 reply("gw disini")
@@ -572,11 +576,13 @@ case 'jadibot':
     break
 
 case'menu':
+let ownerku = `${ownernya}`
 let thubnya = fs.readFileSync(`./media/thumb.jpeg`)
 kntl = process.uptime()
 
 mana =`Hi ${pushname}!
 
+• Creator : @${ownerku.split('@')[0]}
 • Script : github.com/adiixyz/adyybotz
 • Prefix : ${prefix}
 • Auto recording : true
@@ -598,7 +604,7 @@ sendButImage(from, `${mana}`, `Silahkan pilih salah satu`, thubnya, [
             },
             type: 1,
           },
-        ], {quoted: fkontak, jpegThumbnail:thubnya});
+        ], {contextInfo: { mentionedJid: [ownerku]}, quoted:fonce});
         break
 
 case'help':
@@ -1070,7 +1076,7 @@ mentions(teks, members_id, true)
 break
 
 case 'hidetag':
-if (!mek.key.fromMe && !isGroupAdmins) return reply("Only Admin")
+if (!isOwner && !isGroupAdmins) return reply("Only Admin")
 if (!isGroup) return reply(mess.OnlyGrup)
 var value = args.join(' ')
 var group = await conn.groupMetadata(from)
@@ -1088,7 +1094,7 @@ conn.sendMessage(from, optionshidetagg, text, {quoted: fonce})
 break
            
 case 'setprefix':
-if (!mek.key.fromMe)return reply("Khusus Owner");
+if (!isOwner)return reply("Khusus Owner");
 fg = args.join(' ')
 if (args[0] == "multi") {
 multi = true
@@ -1148,7 +1154,7 @@ reply('Sukses delete all chat :)')
 break
 
 case 'bc':
-if (!mek.key.fromMe) return reply('Kamu siapa?')
+if (!isOwner) return reply('Kamu siapa?')
 if (args.length < 1) return reply('.......')
 anu = await conn.chats.all()
 if (isMedia && !mek.message.videoMessage || isQuotedImage) {
@@ -1242,7 +1248,7 @@ imgreply(stdout)
 break   
 
 case 'setfakeimg':
-if (!mek.key.fromMe) return reply('only owner')
+if (!isOwner) return reply('only owner')
 if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length == 0) {
 boij = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 delb = await conn.downloadMediaMessage(boij)
@@ -1254,7 +1260,7 @@ reply(`Kirim gambar dengan caption ${prefix}sethumb`)
 break
 	
 case 'setthumb':
-if (!mek.key.fromMe) return reply('bukan owner')
+if (!isOwner) return reply('bukan owner')
 if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length == 0) {
 boij = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 delb = await conn.downloadMediaMessage(boij)
@@ -1280,14 +1286,14 @@ imgreply(anu)
 break
 
 case 'upswteks':
-if (!mek.key.fromMe) return reply('only owner')
+if (!isOwner) return reply('only owner')
 if (!q) return imgreply('Isi teksnya!')
 conn.sendMessage('status@broadcast', `${q}`, extendedText)
 imgreply(`done up story teks ${q}`)
 break
 
 case 'upswimage':
-if (!mek.key.fromMe) return reply('Mau Ngapain')
+if (!isOwner) return reply('Mau Ngapain')
 if (isQuotedImage) {
 const babi = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 anjg = await conn.downloadMediaMessage(babi)
@@ -1300,7 +1306,7 @@ reply('Reply gambarnya!')
 break
 
 case 'upswvideo':
-if (!mek.key.fromMe) return reply('only owner')
+if (!isOwner) return reply('only owner')
 if (isQuotedVideo) {
 const swsw = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 cihcih = await conn.downloadMediaMessage(swsw)
@@ -1358,7 +1364,7 @@ fs.unlinkSync(rano)
 break
 
 case 'setpp':
-if (!mek.key.fromMe) return reply('only owner')
+if (!isOwner) return reply('only owner')
 conn.updatePresence(from, Presence.composing)
 if (!isQuotedImage) return reply('Reply imagenya!')
 if (!isOwner) return reply('only owner')
@@ -1369,10 +1375,9 @@ conn.sendMessage(from,'success',text)
 break
 
 case 'leave':
-if (!mek.key.fromMe) return 
+if (!isOwner) return 
 if (!isGroup) return reply('only grub kak')
-if (!mek.key.fromMe) return  reply('owner only')
-conn.updatePresence(from, Presence.composing)
+if (!isOwner) return  reply('owner only')
 conn.groupLeave(from)
 break
 
@@ -1403,7 +1408,6 @@ require('./lib/fetcher.js').modStick(media, conn, mek, from)
 break
     
 case "q":
-if (!mek.key.fromMe) return
 if (!m.quoted) return reply("reply message!");
 let qse = conn.serializeM(await m.getQuotedObj());
 if (!qse.quoted)
@@ -1431,7 +1435,6 @@ mentions(txt, anu, true)
 case 'addcmd': 
 case 'setcmd':
 if(!q) return reply('contoh .addcmd hidetag sz-self')
-if (!mek.key.fromMe)return reply("Khusus Owner");
 if (isQuotedSticker) {
 if (!q) return reply(`Penggunaan : ${command} cmdnya dan tag stickernya`)
 var kodenya = mek.message.extendedTextMessage.contextInfo.quotedMessage.stickerMessage.fileSha256.toString('base64')
@@ -1444,7 +1447,6 @@ reply('tag stickenya')
 break
 
 case 'delcmd':
-if (!mek.key.fromMe)return reply("Khusus Owner");
 if (!isQuotedSticker) return reply(`Penggunaan : ${command} tagsticker`)
 var kodenya = mek.message.extendedTextMessage.contextInfo.quotedMessage.stickerMessage.fileSha256.toString('base64')
 _scommand.splice(getCommandPosition(kodenya), 1)
@@ -1455,7 +1457,6 @@ break
               
               
 case 'listcmd':
-if (!mek.key.fromMe)return
 let teksnyee = `\`\`\` LIST STICKER CMD \`\`\``
 let cemde = [];
 for (let i of _scommand) {
@@ -1467,7 +1468,7 @@ break
               
               
 case 'setnama':
-if (!mek.key.fromMe) return
+if (!isOwner) return
 if (args.length < 1) return reply('Teksnya?')
 anu = args.join(' ')
 conn.updateProfileName(anu)
@@ -1725,7 +1726,6 @@ reply(ini_txt)
 break    
       
 case 'get':
-if (!mek.key.fromMe) return
 if(!q) return reply('linknya?')
 fetch(`${args[0]}`).then(res => res.text())  
 .then(bu =>{
@@ -1952,7 +1952,7 @@ fs.unlinkSync(`./${sender}.jpeg`)
 break             
      
 case 'revoke':
-if (!isGroupAdmins && !mek.key.fromMe) return reply("Khusus admin");
+if (!isGroupAdmins && !isOwner) return reply("Khusus admin");
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 if (!isGroup) return reply(mess.only.group)
 json = ['action', 'inviteReset', from]
@@ -1965,8 +1965,8 @@ case 'listgroup':
 txt = conn.chats.all().filter(v => v.jid.endsWith('g.us')).map(v =>`${conn.getName(v.jid)}\n${v.jid} ${v.read_only ? 'Left' : 'Joined'}`).join`\n\n`
 conn.reply(m.chat, 'List Groups:\n' + txt, m)
 break      
- 
- 
+
+
 case 'ytdl':
 reply(mess.wait)
 if (!q) return reply(`Example : ${prefix + command} yang berlalu`)
@@ -2297,7 +2297,7 @@ break
 
 
 case "mode":
-        if (!mek.key.fromMe) return;
+        if (!isOwner) return;
         sendButMessage(from, `SETTING MODE SELF OR PUBLIC!`, `Silahkan pilih salah satu`, [
           {
             buttonId: `self`,
