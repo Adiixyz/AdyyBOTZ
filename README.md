@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://github.com/Adiixyz.png" alt="dy" width="600" />
+<img src="./media/thumb.jpeg" alt="dy" width="600" />
 </div>
 
 <h1 align="center">ADYYBOTZ</h1>
