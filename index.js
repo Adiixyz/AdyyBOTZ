@@ -374,7 +374,7 @@ const _0x27ad8f=_0x4e80;(function(_0x3f6508,_0x3ee177){const _0x51757f=_0x4e80,_
 
 //************************[FAKE REPLY]************************\\
 const fkontak = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: `0@s.whatsapp.net` } : {}) }, message: { 'contactMessage': { 'displayName': `${pushname}`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${pushname},;;;\nFN:${pushname},\nitem1.TEL;waid=${sender.split('@')[0]}:${sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': fs.readFileSync('./media/thumb.jpeg')}}}
-const freply = { key: { fromMe: false, participant: '0@s.whatsapp.net' ,}, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": fake, "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486","jpegThumbnail": fs.readFileSync(`media/fake.jpeg`)} } }
+const freply = { key: { fromMe: false, participant: '0@s.whatsapp.net' ,}, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": `${pushname} Gajelas`, "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486","jpegThumbnail": fs.readFileSync(`media/fake.jpeg`)} } }
 const fonce = {
 key:{ fromMe: false, participant:'0@s.whatsapp.net',
 }, 
@@ -578,21 +578,14 @@ case'menu':
 let thubnya = fs.readFileSync(`./media/thumb.jpeg`)
 kntl = process.uptime()
 
-mana =`_Hi ${pushname}!_
+mana =`Hi ${pushname}!
 
-*Bot Info*
 • Script : github.com/adiixyz/adyybotz
 • Prefix : ${prefix}
 • Auto recording : true
 • Multi Prefix : true
 • No Prefix : false
 • Uptime : ${waktu(kntl)}
-
-*User Info*
-• User : ${pushname}
-• Premium User : false
-• Registered : ✓
-`
 sendButImage(from, `${mana}`, `Silahkan pilih salah satu`, thubnya, [
           {
             buttonId: `command`,
@@ -608,7 +601,7 @@ sendButImage(from, `${mana}`, `Silahkan pilih salah satu`, thubnya, [
             },
             type: 1,
           },
-        ], {quoted:fkontak, thumbnail:thubnya});
+        ], {quoted:fkontak, jpegThumbnail:thubnya});
         break
 
 case'help':
@@ -711,7 +704,7 @@ conn.sendMessage(from, listMsg, MessageType.listMessage, {contextInfo: { mention
 break
 
 case'ownermenu':
-menu =`\`\`\`「 OWNER MENU ツ 」\`\`\`
+menu =`\`\`\`「 OWNER MENU ツ 」
 
 ${x} > [eval]
 ${x} => [eval async]
@@ -733,21 +726,23 @@ ${x} #leave
 ${x} #get
 ${x} #setnama
 ${x} #join
-${x} #status`
+${x} #status\`\`\`
+`
 katalog(menu)
 break
 
 case'jadibotmenu':
-menu =`\`\`\`「 JADIBOT MENU ツ 」\`\`\`
+menu =`\`\`\`「 JADIBOT MENU ツ 」
 
 ${x} #jadibot
 ${x} #stopjadibot
-${x} #listbot`
+${x} #listbot\`\`\`
+`
 katalog(menu)
 break
 
 case'groupmenu':
-menu =`\`\`\`「 GROUP MENU ツ 」\`\`\`
+menu =`\`\`\`「 GROUP MENU ツ 」
 
 ${x} #kick
 ${x} #add
@@ -765,24 +760,26 @@ ${x} #revoke
 ${x} #getname
 ${x} #groupinfo
 ${x} #linkgc
-${x} #isbaileys`
+${x} #isbaileys\`\`\`
+`
 katalog(menu)
 break
 
 case'animemenu':
-menu =`\`\`\`「 ANIME MENU ツ 」\`\`\`
+menu =`\`\`\`「 ANIME MENU ツ 」
 
 ${x} #waifu
 ${x} #loli
 ${x} #husbu
 ${x} #neko
 ${x} #anime
-${x} #elaina`
+${x} #elaina\`\`\`
+`
 katalog(menu)
 break
 
 case'othermenu':
-menu =`\`\`\`「 OTHER MENU ツ 」\`\`\`
+menu =`\`\`\`「 OTHER MENU ツ 」
 
 ${x} #sherelock
 ${x} #listgroup
@@ -798,12 +795,13 @@ ${x} #repeat [teks*4]
 ${x} #cecan
 ${x} #cogan
 ${x} #darkjokes
-${x} #kontak`
+${x} #kontak\`\`\`
+`
 katalog(menu)
 break
 
 case'stickermenu':
-menu =`\`\`\`「 STICKER MENU ツ 」\`\`\`
+menu =`\`\`\`「 STICKER MENU ツ 」
 
 ${x} #take
 ${x} #stiker
@@ -812,12 +810,13 @@ ${x} #detikvideo
 ${x} #detikvn
 ${x} #tomp4
 ${x} #attp
-${x} #emoji`
+${x} #emoji\`\`\`
+`
 katalog(menu)
 break
 
 case'downloadermenu':
-menu =`\`\`\`「 DOWNLOADER MENU ツ 」\`\`\`
+menu =`\`\`\`「 DOWNLOADER MENU ツ 」
 
 ${x} #playstore
 ${x} #play
@@ -830,28 +829,31 @@ ${x} #lirik
 ${x} #ytmp3
 ${x} #ytmp4
 ${x} #ytsearch
-${x} #ytdl`
+${x} #ytdl\`\`\`
+`
 katalog(menu)
 break
 
 case'wallpapermenu':
-menu =`\`\`\`「 WALLPAPER MENU ツ 」\`\`\`
+menu =`\`\`\`「 WALLPAPER MENU ツ 」
 
 ${x} #wallpapercode
 ${x} #wallpapertech
-${x} #wallpaperislam`
+${x} #wallpaperislam\`\`\`
+`
 katalog(menu)
 break
 
 case'gamemenu':
-menu =`\`\`\`「 GAME MENU ツ 」\`\`\`
+menu =`\`\`\`「 GAME MENU ツ 」
 
-${x} #suit batu/kertas/gunting`
+${x} #suit batu/kertas/gunting\`\`\`
+`
 katalog(menu)
 break
 
 case'funmenu':
-menu =`\`\`\`「 FUN MENU ツ 」\`\`\`
+menu =`\`\`\`「 FUN MENU ツ 」
 
 ${x} #readmore
 ${x} #jadian
@@ -859,7 +861,6 @@ ${x} #ganteng
 ${x} #beban
 ${x} #cantik
 ${x} #jelek
-${x} #nganggur
 ${x} #hebat
 ${x} #wibu
 ${x} #pakboy
@@ -869,12 +870,13 @@ ${x} #nolep
 ${x} #jahat
 ${x} #baik
 ${x} #wangy
-${x} #pemenang`
+${x} #pemenang\`\`\`
+`
 katalog(menu)
 break
 
 case'storagemenu':
-menu =`\`\`\`「 STORAGE MENU ツ 」\`\`\`
+menu =`\`\`\`「 STORAGE MENU ツ 」
 
 ${x} #addimg
 ${x} #getimg
@@ -887,7 +889,8 @@ ${x} #getvn
 ${x} #listvn
 ${x} #getvideo
 ${x} #listvideo
-${x} #addvideo`
+${x} #addvideo\`\`\`
+`
 katalog(menu)
 break
 
@@ -937,7 +940,7 @@ break
 case 'runtime':
 runtime = process.uptime()
 teks = `${waktu(runtime)}`
-textImg(`${teks}`)
+reply(`${teks}`)
 break
 
 case 'group': 
@@ -960,14 +963,14 @@ from,
  {
 buttonId: `group close`,
 buttonText: {
-displayText: `open`,
+displayText: `close`,
 },
 type: 1,
 },
 {
-buttonId: `group close`,
+buttonId: `group open`,
 buttonText: {
-displayText: `close`,
+displayText: `open`,
 },
 type: 1,
 },
@@ -1271,9 +1274,11 @@ const tiiiimestamp = speed();
 const latensiiii = speed() - tiiiimestamp
 var groups = conn.chats.array.filter(v => v.jid.endsWith('g.us'))
 var privat = conn.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
-anu = `${x} Speed : ${latensiiii.toFixed(4)} Second
-${x} private chat : ${privat.length}
-${x} group chat : ${groups.length}`
+anu = `\`\`\`Respond in ${latensiiii.toFixed(4)} Second
+
+Private chats : ${privat.length}
+Group chats : ${groups.length}\`\`\`
+`
 imgreply(anu)
 break
 
