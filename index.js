@@ -60,7 +60,7 @@ const imagenye = JSON.parse(fs.readFileSync("./storage/image.json"));
 selfnya = false
 multi = true
 nopref = false
-prefa = '👎'
+prefa = '.'
 bacaanmenu ='root@AdyyBotz~#' //BUAT FOOTER MENU, GANTI KALO MAU
 imgmenu = fs.readFileSync(`./media/fake.jpeg`)
 linkmenu = '-'
@@ -502,7 +502,7 @@ reply("gw disini")
 }
 
 if (budy.includes("bot")){
-reply("aktif")
+reply('aktif niih')
 }
 
 let settingstatus = 0;
@@ -587,18 +587,18 @@ sendButImage(from, `${mana}`, `Silahkan pilih salah satu`, thubnya, [
           {
             buttonId: `command`,
             buttonText: {
-              displayText: `All Commands`,
+              displayText: ALL FITUR`,
             },
             type: 1,
           },
           {
             buttonId: `buttonmenu`,
             buttonText: {
-              displayText: `Button Menu`,
+              displayText: `LIST MENU`,
             },
             type: 1,
           },
-        ], {quoted: fkontak});
+        ], {quoted: fkontak, jpegThumbnail:thubnya});
         break
 
 case'help':
@@ -1613,7 +1613,7 @@ sendButImage(
 case 'darkjokes': 
 dyyyy = ['dark jokes','dark jokes indo','dark jokes Indonesia']
 let szdiiii = dyyyy[Math.floor(Math.random() * dyyyy.length)]
-let pinnnn = await hx.pinterest(dyyyy)
+let pinnnn = await hx.pinterest(szdiiii)
 let acccc = pinnnn[Math.floor(Math.random() * pinnnn.length)]
 let diiii = await getBuffer(acccc)
 sendButImage(
@@ -1623,7 +1623,7 @@ sendButImage(
           diiii,
           [
             {
-              buttonId: `darkjokes ${szdiiii}`,
+              buttonId: `darkjokes`,
               buttonText: {
                 displayText: `➡️Next`,
               },
@@ -1762,8 +1762,8 @@ case 's':
 case 'sg': 
 case 's':
 anu = args.join(' ').split('|')
-satu = anu[0] !== '' ? anu[0] : `SZ`
-dua = typeof anu[1] !== 'undefined' ? anu[1] : `SELF`
+satu = anu[0] !== '' ? anu[0] : `ADYY`
+dua = typeof anu[1] !== 'undefined' ? anu[1] : `BOTZ`
 if (isMedia && !mek.message.videoMessage || isQuotedImage ) {
 const encmedia = isQuotedImage   ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 media = await conn.downloadAndSaveMediaMessage(encmedia)
@@ -1792,7 +1792,7 @@ fs.unlinkSync(media)
 const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 const media = await conn.downloadAndSaveMediaMessage(encmedia)
 anu = args.join(' ').split('|')
-satu = anu[0] !== '' ? anu[0] : `SZ`
+satu = anu[0] !== '' ? anu[0] : `ADYY`
 dua = typeof anu[1] !== 'undefined' ? anu[1] : `SELF`
 await createExif(satu ,dua)
 out = getRandom('.webp')
