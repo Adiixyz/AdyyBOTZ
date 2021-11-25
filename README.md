@@ -18,6 +18,16 @@
 
 #### Run On Repl.It
 [![Run on Repl.It](https://repl.it/badge/github/Adiixyz/AdyyBOTZ)](https://repl.it/github/Adiixyz/AdyyBOTZ)
+```cmd
+Open Console
+------------
+> npm i
+> npm i qrcode
+> install-pkg webp
+> install-pkg ffmpeg
+-------------
+Click Run
+```
 
 ## Termux
 ```cmd
