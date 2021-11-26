@@ -582,7 +582,6 @@ kntl = process.uptime()
 
 mana =`Hi ${pushname}!
 
-• Creator : @${ownerku.split('@')[0]}
 • Script : github.com/adiixyz/adyybotz
 • Prefix : ${prefix}
 • Auto recording : true
@@ -593,14 +592,14 @@ sendButImage(from, `${mana}`, `Silahkan pilih salah satu`, thubnya, [
           {
             buttonId: `command`,
             buttonText: {
-              displayText: `ALL FITUR`,
+              displayText: `⋮☰ ALL FITUR`,
             },
             type: 1,
           },
           {
             buttonId: `buttonmenu`,
             buttonText: {
-              displayText: `LIST MENU`,
+              displayText: `⋮☰ LIST MENU`,
             },
             type: 1,
           },
@@ -798,7 +797,8 @@ ${x} #repeat [teks*4]
 ${x} #cecan
 ${x} #cogan
 ${x} #darkjokes
-${x} #kontak\`\`\`
+${x} #kontak
+${x} #ssweb\`\`\`
 `
 katalog(menu)
 break
@@ -873,7 +873,11 @@ ${x} #nolep
 ${x} #jahat
 ${x} #baik
 ${x} #wangy
-${x} #pemenang\`\`\`
+${x} #pemenang
+${x} #kapankah
+${x} #rate
+${x} #apakah
+${x} #citacita\`\`\`
 `
 katalog(menu)
 break
@@ -1011,6 +1015,41 @@ case 'suit':
 					} else {
 					  reply('Pilih gunting/batu/kertas')
 					}
+break
+
+case "kapankah":
+kapankah = body.slice(1)
+const kapan =['Besok','Lusa','1 Hari Lagi','2 Hari Lagi','3 Hari Lagi','4 Hari Lagi','5 Hari Lagi','6 Hari Lagi','1 Bulan Lagi','2 Bulan Lagi','3 Bulan Lagi','4 Bulan Lagi','5 Bulan Lagi','6 Bulan Lagi','7 Bulan Lagi','8 Bulan Lagi','9 Bulan Lagi','10 Bulan Lagi','11 Bulan Lagi','1 Tahun lagi','2 Tahun lagi','3 Tahun lag0i','4 Tahun lagi','5 Tahun lagi','6 Tahun lagi','7 Tahun lagi','8 Tahun lagi','9 Tahun lagi','10 Tahun lagi']
+const koh = kapan[Math.floor(Math.random() * kapan.length)]
+conn.sendMessage(from, 'Pertanyaan : *'+kapankah+'*\n\nJawaban : '+ koh, text, { quoted: mek })
+break
+
+case "rate":
+rate = body.slice(1)
+const ra =['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
+const te = ra[Math.floor(Math.random() * ra.length)]
+conn.sendMessage(from, 'Pertanyaan : *'+rate+'*\n\nJawaban : '+ te+'%', text, { quoted: mek })
+break
+
+case "apakah":
+apakah = body.slice(1)
+const apa =['Iya','Tidak','Bisa Jadi','Hmmm gimana ya']
+const kah = apa[Math.floor(Math.random() * apa.length)]
+conn.sendMessage(from, 'Pertanyaan : *'+apakah+'*\n\nJawaban : '+ kah, text, { quoted: mek })
+break
+
+case 'citacita':
+const cita =['http://piyobot.000webhostapp.com/citacita1.mp3','http://piyobot.000webhostapp.com/citacita2.mp3','http://piyobot.000webhostapp.com/citacita3.mp3','http://piyobot.000webhostapp.com/citacita4.mp3','http://piyobot.000webhostapp.com/citacita5.mp3','http://piyobot.000webhostapp.com/citacita6.mp3','http://piyobot.000webhostapp.com/citacita7.mp3','http://piyobot.000webhostapp.com/citacita8.mp3','http://piyobot.000webhostapp.com/citacita9.mp3','http://piyobot.000webhostapp.com/citacita10.mp3','http://piyobot.000webhostapp.com/citacita11.mp3','http://piyobot.000webhostapp.com/citacita12.mp3','http://piyobot.000webhostapp.com/citacita13.mp3','http://piyobot.000webhostapp.com/citacita14.mp3','http://piyobot.000webhostapp.com/citacita15.mp3','http://piyobot.000webhostapp.com/citacita16.mp3','http://piyobot.000webhostapp.com/citacita17.mp3','http://piyobot.000webhostapp.com/citacita18.mp3','http://piyobot.000webhostapp.com/citacita19.mp3','http://piyobot.000webhostapp.com/citacita20.mp3','http://piyobot.000webhostapp.com/citacita21.mp3','http://piyobot.000webhostapp.com/citacita22.mp3','http://piyobot.000webhostapp.com/citacita23.mp3','http://piyobot.000webhostapp.com/citacita24.mp3','http://piyobot.000webhostapp.com/citacita25.mp3','http://piyobot.000webhostapp.com/citacita26.mp3','http://piyobot.000webhostapp.com/citacita27.mp3','http://piyobot.000webhostapp.com/citacita28.mp3','http://piyobot.000webhostapp.com/citacita29.mp3','http://piyobot.000webhostapp.com/citacita30.mp3','http://piyobot.000webhostapp.com/citacita31.mp3','http://piyobot.000webhostapp.com/citacita32.mp3','http://piyobot.000webhostapp.com/citacita33.mp3','http://piyobot.000webhostapp.com/citacita34.mp3','http://piyobot.000webhostapp.com/citacita35.mp3']
+const cita3 = cita[Math.floor(Math.random() * cita.length)]
+cita2 = await getBuffer(cita3)
+conn.sendMessage(from, cita2, audio,{mimetype: 'audio/mp4', ptt:true, quoted: mek})
+break
+
+case "ssweb":
+reply(mess.wait)
+ini_url = body.slice(7)
+atetepe = await getBuffer(`https://bx-hunter.herokuapp.com/api/ssweb?url=${ini_url}&apikey=Ikyy69`)
+conn.sendMessage(from, atetepe, image, { quoted: mek })
 break
 
 case 'wangy':
