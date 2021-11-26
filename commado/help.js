@@ -1,14 +1,10 @@
 const help = (x) => {
 	return `New Feature!
-${x} #neko
-${x} #elaina
-${x} #ytdl
-${x} #pemenang
-${x} #wallpapercode
-${x} #wallpapertech
-${x} #wallpaperislam
-${x} #isbaileys
-${x} #suit
+${x} #kapankah
+${x} #apakah
+${x} #citacita
+${x} #rate
+${x} #ssweb
 
 Simple Menu
 ${x} #ownermenu
@@ -39,7 +35,7 @@ ${x} #setfakeimg [reply]
 ${x} #setthumb [reply]
 ${x} #bc
 ${x} #clearall
-${x} $setpp
+${x} #setpp
 ${x} #leave
 ${x} #get
 ${x} #setnama
@@ -93,6 +89,7 @@ ${x} #cecan
 ${x} #cogan
 ${x} #darkjokes
 ${x} #kontak
+${x} #ssweb
 
 Sticker
 ${x} #take
@@ -149,6 +146,10 @@ ${x} #jahat
 ${x} #baik
 ${x} #wangy
 ${x} #pemenang
+${x} #kapankah
+${x} #apakah
+${x} #citacita
+${x} #rate
 
 Storage
 ${x} #addimg
