@@ -925,16 +925,16 @@ var priivat = conn.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
 let thumbnya = fs.readFileSync(`./media/thumb.jpeg`)
 ruan = process.uptime()
 
-anu =`AdyyBot
+anu =`*${conn.user.name} 乂 Bot Whatsapp*
 
-• Mode : ${selfnya ? 'Self' : 'Public'}
-• Jam : ${time}
-• Tanggal : ${tampilTanggal}
-• Prefix : Multi-Prefix
-• Chats : ${priivat.length}
-• Uptime : ${waktu(ruan)}
-• Script : github.com/adiixyz/adyybotz
-• Group Bot : s.id/adyybotzgc
+${x} Mode : ${selfnya ? 'Self' : 'Public'}
+${x} Jam : ${time}
+${x} Tanggal : ${tampilTanggal}
+${x} Prefix : Multi-Prefix
+${x} Chats : ${priivat.length}
+${x} Uptime : ${waktu(ruan)}
+${x} Script : github.com/adiixyz/adyybotz
+${x} Group Bot : s.id/adyybotzgc
 `
 
 sendButImage(
