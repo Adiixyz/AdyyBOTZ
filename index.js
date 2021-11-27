@@ -498,20 +498,13 @@ reply("adyy disini")
 }
 
 if (budy.match("@60199782326")){
-reply('Apasih ngetag ngetas owner ku')
+reply('Apasih ngetag ngetag owner ku')
 }
 
-if (budy.includes("adyy")){
-reply("gw disini")
-}
-
-if (budy.includes("bot")){
-reply('aktif niih')
-}
 
 let settingstatus = 0;
 if (new Date() * 1 - settingstatus > 1000) {
-  let _uptime = process.uptime() * 1000;
+  let _uptime = process.uptime();
   let uptime = waktu(_uptime);
   await conn.setStatus(`Aktif Selama ${uptime}`).catch((_) => _);
   settingstatus = new Date() * 1;
