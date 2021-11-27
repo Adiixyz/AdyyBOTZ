@@ -1,10 +1,10 @@
 {
-    "wait": "*Tunggu sebentar*",
+    "wait": "otewe oniii-chan~",
     "error": {
-        "Iv": "Link yang kamu berikan tidak valid",
-        "api": "Maaf terjadi kesalahan"
+        "Iv": "link ga valid~",
+        "api": "wkwk emror~"
     },
-    "OnlyGrup": "Perintah ini hanya bisa digunakan di grup",
-    "GrupAdmin": "Perintah ini hanya bisa digunakan oleh Admin Grup",
-    "BotAdmin": "Bot Harus menjadi admin"
+    "OnlyGrup": "grup only~",
+    "GrupAdmin": "grup admin onlyy~",
+    "BotAdmin": "jadikan bot admin dulu sayang:v"
 }
