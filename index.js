@@ -42,6 +42,7 @@ const { jadibot, stopjadibot, listjadibot } = require('./lib/jadibot')
 //************************************************************\\  
 //SIMPLE
 const { help } = require('./commado/help')
+const { donasi } = require('./commado/donasi')
 const mess = JSON.parse(fs.readFileSync('./commado/mess.json'));
 const setting = JSON.parse(fs.readFileSync('./setting.json'))
 const { fakeimg, f,fake,x, xteamApi } = setting
@@ -573,15 +574,34 @@ let ownerku = `${ownernya}`
 let thubnya = fs.readFileSync(`./media/thumb.jpeg`)
 kntl = process.uptime()
 
-mana =`Hi ${pushname}!
+mana =`「 ${conn.user.name} 」
 
-• Script : github.com/adiixyz/adyybotz
-• Prefix : ${prefix}
-• Auto recording : true
-• Multi Prefix : true
-• No Prefix : false
-• Uptime : ${waktu(kntl)}`
+Hello ${pushname}
+Uptime : ${waktu(kntl)}
+Prefix : ${prefix}
+
+_Jika button tidak muncul. ketik command dibawah_
+\`\`\`
+${x} #ownermenu
+${x} #jadibotmenu
+${x} #groupmenu
+${x} #animemenu
+${x} #othermenu
+${x} #stickermenu
+${x} #downloadermenu
+${x} #wallpapermenu
+${x} #gamemenu
+${x} #funmenu
+${x} #storagemenu\`\`\`
+`
 sendButImage(from, `${mana}`, `Silahkan pilih salah satu`, thubnya, [
+          {
+            buttonId: `sc`,
+            buttonText: {
+              displayText: `⋮☰ Script Bot`,
+            },
+            type: 1,
+          },
           {
             buttonId: `command`,
             buttonText: {
@@ -636,8 +656,12 @@ case'buttonmenu':
                       "title": `${tampilTanggal} | ${time}`,
  rows: [
                           {
-                              "title": "Ping",
-                              "rowId": `ping`
+                              "title": "Script",
+                              "rowId": `sc`
+                           },
+                           {
+                              "title": "Donasi",
+                              "rowId": `donasi`
                            },
                            {
                               "title": "Creator",
@@ -723,7 +747,7 @@ ${x} #setnama
 ${x} #join
 ${x} #status\`\`\`
 `
-katalog(menu)
+reply(menu)
 break
 
 case'jadibotmenu':
@@ -733,7 +757,7 @@ ${x} #jadibot
 ${x} #stopjadibot
 ${x} #listbot\`\`\`
 `
-katalog(menu)
+reply(menu)
 break
 
 case'groupmenu':
@@ -757,7 +781,7 @@ ${x} #groupinfo
 ${x} #linkgc
 ${x} #isbaileys\`\`\`
 `
-katalog(menu)
+reply(menu)
 break
 
 case'animemenu':
@@ -770,7 +794,7 @@ ${x} #neko
 ${x} #anime
 ${x} #elaina\`\`\`
 `
-katalog(menu)
+reply(menu)
 break
 
 case'othermenu':
@@ -791,9 +815,11 @@ ${x} #cecan
 ${x} #cogan
 ${x} #darkjokes
 ${x} #kontak
-${x} #ssweb\`\`\`
+${x} #ssweb
+${x} #sc
+${x} #donasi\`\`\`
 `
-katalog(menu)
+reply(menu)
 break
 
 case'stickermenu':
@@ -808,7 +834,7 @@ ${x} #tomp4
 ${x} #attp
 ${x} #emoji\`\`\`
 `
-katalog(menu)
+reply(menu)
 break
 
 case'downloadermenu':
@@ -827,7 +853,7 @@ ${x} #ytmp4
 ${x} #ytsearch
 ${x} #ytdl\`\`\`
 `
-katalog(menu)
+reply(menu)
 break
 
 case'wallpapermenu':
@@ -837,7 +863,7 @@ ${x} #wallpapercode
 ${x} #wallpapertech
 ${x} #wallpaperislam\`\`\`
 `
-katalog(menu)
+reply(menu)
 break
 
 case'gamemenu':
@@ -845,7 +871,7 @@ menu =`\`\`\`「 GAME MENU ツ 」
 
 ${x} #suit batu/kertas/gunting\`\`\`
 `
-katalog(menu)
+reply(menu)
 break
 
 case'funmenu':
@@ -872,7 +898,7 @@ ${x} #rate
 ${x} #apakah
 ${x} #citacita\`\`\`
 `
-katalog(menu)
+reply(menu)
 break
 
 case'storagemenu':
@@ -891,7 +917,7 @@ ${x} #getvideo
 ${x} #listvideo
 ${x} #addvideo\`\`\`
 `
-katalog(menu)
+reply(menu)
 break
 
 case'command':
@@ -918,6 +944,13 @@ sendButImage(
           thumbnya,
           [
             {
+            buttonId: `donasi`,
+            buttonText: {
+              displayText: `donasi`,
+            },
+            type: 1,
+            },
+            {
               buttonId: `Owner`,
               buttonText: {
                 displayText: `Owner`,
@@ -926,6 +959,14 @@ sendButImage(
             },
           ]
         );
+break
+
+case'sc':
+reply('Bot ini menggunakan sc https://github.com/Adiixyz/AdyyBOTZ')
+break
+
+case'donasi':
+reply(`${donasi(x)}`)
 break
 
 case'repeat':
