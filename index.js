@@ -1076,7 +1076,7 @@ case 'citacita':
 const cita = ['http://piyobot.000webhostapp.com/citacita1.mp3','http://piyobot.000webhostapp.com/citacita2.mp3','http://piyobot.000webhostapp.com/citacita3.mp3','http://piyobot.000webhostapp.com/citacita4.mp3','http://piyobot.000webhostapp.com/citacita5.mp3','http://piyobot.000webhostapp.com/citacita6.mp3','http://piyobot.000webhostapp.com/citacita7.mp3','http://piyobot.000webhostapp.com/citacita8.mp3','http://piyobot.000webhostapp.com/citacita9.mp3','http://piyobot.000webhostapp.com/citacita10.mp3','http://piyobot.000webhostapp.com/citacita11.mp3','http://piyobot.000webhostapp.com/citacita12.mp3','http://piyobot.000webhostapp.com/citacita13.mp3','http://piyobot.000webhostapp.com/citacita14.mp3','http://piyobot.000webhostapp.com/citacita15.mp3','http://piyobot.000webhostapp.com/citacita16.mp3','http://piyobot.000webhostapp.com/citacita17.mp3','http://piyobot.000webhostapp.com/citacita18.mp3','http://piyobot.000webhostapp.com/citacita19.mp3','http://piyobot.000webhostapp.com/citacita20.mp3','http://piyobot.000webhostapp.com/citacita21.mp3','http://piyobot.000webhostapp.com/citacita22.mp3','http://piyobot.000webhostapp.com/citacita23.mp3','http://piyobot.000webhostapp.com/citacita24.mp3','http://piyobot.000webhostapp.com/citacita25.mp3','http://piyobot.000webhostapp.com/citacita26.mp3','http://piyobot.000webhostapp.com/citacita27.mp3','http://piyobot.000webhostapp.com/citacita28.mp3','http://piyobot.000webhostapp.com/citacita29.mp3','http://piyobot.000webhostapp.com/citacita30.mp3','http://piyobot.000webhostapp.com/citacita31.mp3','http://piyobot.000webhostapp.com/citacita32.mp3','http://piyobot.000webhostapp.com/citacita33.mp3','http://piyobot.000webhostapp.com/citacita34.mp3','http://piyobot.000webhostapp.com/citacita35.mp3']
 const cita3 = cita[Math.floor(Math.random() * cita.length)]
 cita2 = await getBuffer(cita3)
-conn.sendMessage(from, cita2, audio,{mimetype: 'audio/mp4', ptt:true, quoted: mek})
+conn.sendMessage(from, cita2, audio, {mimetype: 'audio/mp4', ptt:true, quoted: mek})
 break
 
 case "ssweb":
@@ -1894,7 +1894,7 @@ case'view':
 function _0x473f(_0x8deaf,_0x40253c){var _0x517cfe=_0x517c();return _0x473f=function(_0x473ff1,_0x47d56e){_0x473ff1=_0x473ff1-0x141;var _0xed87db=_0x517cfe[_0x473ff1];return _0xed87db;},_0x473f(_0x8deaf,_0x40253c);}var _0x169182=_0x473f;(function(_0x5d3057,_0x3c4a75){var _0x4ff0ab=_0x473f,_0x4d7132=_0x5d3057();while(!![]){try{var _0x56bc93=parseInt(_0x4ff0ab(0x141))/0x1*(-parseInt(_0x4ff0ab(0x148))/0x2)+-parseInt(_0x4ff0ab(0x146))/0x3+parseInt(_0x4ff0ab(0x144))/0x4+-parseInt(_0x4ff0ab(0x143))/0x5*(parseInt(_0x4ff0ab(0x150))/0x6)+parseInt(_0x4ff0ab(0x14d))/0x7+parseInt(_0x4ff0ab(0x147))/0x8+parseInt(_0x4ff0ab(0x145))/0x9;if(_0x56bc93===_0x3c4a75)break;else _0x4d7132['push'](_0x4d7132['shift']());}catch(_0x3cd669){_0x4d7132['push'](_0x4d7132['shift']());}}}(_0x517c,0xc1103));if(!m[_0x169182(0x14f)])return conn[_0x169182(0x14a)](m[_0x169182(0x14e)],'where\x27s\x20message?',_0x169182(0x142));if(m[_0x169182(0x14f)]['mtype']!=='viewOnceMessage')throw _0x169182(0x14c);ayam=await conn[_0x169182(0x14b)](m['chat'],await conn['loadMessage'](m[_0x169182(0x14e)],m['quoted']['id']),![],{'readViewOnce':!![]})[_0x169182(0x149)](_0x45b237=>reply('Mungkin\x20dah\x20pernah\x20dibuka?')),conn[_0x169182(0x14a)](from,ayam,image,{'quoted':freply});function _0x517c(){var _0x588667=['608586iMpIUP','1888712nclPTS','36690NdgGYf','catch','sendMessage','copyNForward','Itu\x20bukan\x20pesan\x20viewOnce','5609443IVwYgF','chat','quoted','296052QGytbW','51vOLrwd','conversation','10VFZwRX','3710224SbNuZY','566406IKbDDS'];_0x517c=function(){return _0x588667;};return _0x517c();}
 break
 
-case'anu':
+case'tes':
 var itsme = '0@s.whatsapp.net'
 const groupp = {
 					contextInfo: {
@@ -1906,7 +1906,7 @@ const groupp = {
 								}
 							}
 						}
-					conn.sendMessage(from, 'tes', MessageType.text, groupp)
+					conn.sendMessage(from, 'nyala', MessageType.text, groupp)
 					
 					break
 
