@@ -1,12 +1,5 @@
 const help = (x) => {
-	return `New Feature!
-${x} #kapankah
-${x} #apakah
-${x} #citacita
-${x} #rate
-${x} #ssweb
-
-Simple Menu
+	return `Simple Menu
 ${x} #ownermenu
 ${x} #jadibotmenu
 ${x} #groupmenu
