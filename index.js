@@ -1051,7 +1051,7 @@ case 'debug2':
   }
 }
 }, {})
-denz.relayWAMessage(res)
+conn.relayWAMessage(res)
 break
 
 case 'suit':
