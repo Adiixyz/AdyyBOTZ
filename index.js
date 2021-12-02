@@ -1038,7 +1038,7 @@ case 'debug2':
   },
   "hydratedTemplate": {
     "hydratedContentText": `Hi ${pushname} 👋,\n\ntes doang`,
-    "hydratedFooterText": `${NamaBot}`,
+    "hydratedFooterText": `$cot`,
     "hydratedButtons": [
       {
         "urlButton": {
