@@ -185,7 +185,6 @@ const ByReply = type == "extendedTextMessage" && mek.message.extendedTextMessage
 const Pngirim = type == "extendedTextMessage" && mek.message.extendedTextMessage.contextInfo != null ? mek.message.extendedTextMessage.contextInfo.participant || "" : ""
 const fromBot = ByReply ? ByReply.startsWith('3EB0') && ByReply.length === 12 : false
 const stcnya = ByReply ? ByReply.includes('STICKER') : false
-await conn.updatePresence(from, Presence.recording)
 
 // FUNCTION EVAL 
 function jsonformat(string) {
