@@ -494,10 +494,6 @@ if (budy.includes("assalamualaikum")){
 reply("waalai'kumsalam")
 }
 
-if (budy.includes("Adyy")){
-reply("adyy disini")
-}
-
 if (budy.match("@60199782326")){
 reply('Apasih ngetag ngetag owner ku')
 }
