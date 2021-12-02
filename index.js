@@ -1020,6 +1020,40 @@ type: 1,
 }
 break;
 
+case 'debug2':
+   res = await conn.prepareMessageFromContent(from,{
+"templateMessage": {
+  "hydratedFourRowTemplate": {
+    "hydratedContentText": "",
+    "hydratedFooterText": "",
+    "hydratedButtons": [
+      {
+        "urlButton": {
+          "displayText": "",
+          "url": ""
+        },
+        "index": 0
+      }
+    ]
+  },
+  "hydratedTemplate": {
+    "hydratedContentText": `Hi ${pushname} 👋,\n\ntes doang`,
+    "hydratedFooterText": `${NamaBot}`,
+    "hydratedButtons": [
+      {
+        "urlButton": {
+          "displayText": `Script Bot`,
+          "url": "https://github.com/adiixyz/ADYYBOTZ"
+        },
+        "index": 0
+      }
+    ]
+  }
+}
+}, {})
+denz.relayWAMessage(res)
+break
+
 case 'suit':
   if (args.length < 1) return reply('Pilih gunting/batu/kertas')
 					if (args[0] === 'gunting' ) {
