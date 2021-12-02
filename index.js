@@ -574,49 +574,41 @@ let ownerku = `${ownernya}`
 let thubnya = fs.readFileSync(`./media/thumb.jpeg`)
 kntl = process.uptime()
 
-mana =`「 ${conn.user.name} 」
+mana =`Hi ${pushname}!
 
-Hello ${pushname}
-Uptime : ${waktu(kntl)}
-Prefix : ${prefix}
+${x} Mode : ${selfnya ? 'Self' : 'Public'}
+${x} Jam : ${time}
+${x} Tanggal : ${tampilTanggal}
+${x} Prefix : Multi-Prefix
+${x} Uptime : ${waktu(ruan)}
+${x} Script : github.com/adiixyz/adyybotz
+${x} Group Bot : s.id/adyybotzgc
 
-_Jika button tidak muncul. ketik command dibawah_
-\`\`\`
-${x} #ownermenu
-${x} #jadibotmenu
-${x} #groupmenu
-${x} #animemenu
-${x} #othermenu
-${x} #stickermenu
-${x} #downloadermenu
-${x} #wallpapermenu
-${x} #gamemenu
-${x} #funmenu
-${x} #storagemenu\`\`\`
+Type ${prefix}command if your whatsapp does not support Button and list
 `
-sendButImage(from, `${mana}`, `Silahkan pilih salah satu`, thubnya, [
-          {
-            buttonId: `sc`,
-            buttonText: {
-              displayText: `⋮☰ Script Bot`,
-            },
-            type: 1,
-          },
-          {
-            buttonId: `command`,
-            buttonText: {
-              displayText: `⋮☰ ALL FITUR`,
-            },
-            type: 1,
-          },
+sendButImage(from, `${mana}`, `© adyy x gada pacar:v`, thubnya, [
           {
             buttonId: `buttonmenu`,
             buttonText: {
-              displayText: `⋮☰ LIST MENU`,
+              displayText: `All Commands`,
             },
             type: 1,
           },
-        ], {contextInfo: { mentionedJid: [ownerku]}, quoted:fonce});
+          {
+            buttonId: `donasi`,
+            buttonText: {
+              displayText: `Donasi`,
+            },
+            type: 1,
+          },
+          {
+            buttonId: `sc`,
+            buttonText: {
+              displayText: `Script`,
+            },
+            type: 1,
+          },
+        ], {contextInfo: { mentionedJid: [ownerku]}, quoted:freply});
         break
 
 case'help':
@@ -648,7 +640,7 @@ break
 case'buttonmenu':
  let stod = `${sender}`
  listMsg = {
- buttonText: 'pilih',
+ buttonText: 'CHOOSE',
  footerText: '*_© By Adii_*',
  description: `Hai @${stod.split('@')[0]}, Silahkan pilih menu disini`,
  sections: [
