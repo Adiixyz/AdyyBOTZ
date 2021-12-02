@@ -580,7 +580,7 @@ ${x} Mode : ${selfnya ? 'Self' : 'Public'}
 ${x} Jam : ${time}
 ${x} Tanggal : ${tampilTanggal}
 ${x} Prefix : Multi-Prefix
-${x} Uptime : ${waktu(ruan)}
+${x} Uptime : ${waktu(kntl)}
 ${x} Script : github.com/adiixyz/adyybotz
 ${x} Group Bot : s.id/adyybotzgc
 
