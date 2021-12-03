@@ -53,7 +53,7 @@ const starts = async (conn = new WAConnection()) => {
     teks = `- [ Group Description Change ] -\n\nDeskripsi Group telah diubah oleh Admin @${anu.descOwner.split('@')[0]}\n• Deskripsi Baru : ${anu.desc}`
     conn.sendMessage(metdata.id, teks, MessageType.text, {contextInfo: {"mentionedJid": [tag]}, quoted: fkontakk})
     console.log(color('[GROUP]'), color(`Group Description Change In ${metdata.subject}`, 'cyan'))
-  }/*
+  }*/
   else if(anu.restrict == 'false'){
     teks = `- [ Group Setting Change ] -\n\nEdit Group info telah dibuka untuk member\nSekarang semua member dapat mengedit info Group Ini`
     conn.sendMessage(metdata.id, teks, MessageType.text, {quoted: fkontakk})
