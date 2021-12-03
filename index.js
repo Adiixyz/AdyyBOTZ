@@ -443,6 +443,18 @@ headerType: "LOCATION"
 }
 conn.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 }
+const sendButVideo = async(id, text1, desc1, vid1, but = [], options = {}) => {
+kma = vid1
+mhan = await conn.prepareMessage(from, kma, video)
+const buttonMessages = {
+videoMessage: mhan.message.videoMessage,
+contentText: text1,
+footerText: desc1,
+buttons: but,
+headerType: "VIDEO"
+}
+conn.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
+}
 switch( evalnya) {
 case'$':
 if (!isOwner) return 
@@ -566,7 +578,7 @@ case 'jadibot':
 
 case'menu':
 let ownerku = `${ownernya}`
-let thubnya = fs.readFileSync(`./media/thumb.jpeg`)
+let thubnya = fs.readFileSync(`./media/VID-20211128-WA0045.mp4`)
 kntl = process.uptime()
 
 mana =`Hi ${pushname}!
@@ -579,9 +591,8 @@ ${x} Uptime : ${waktu(kntl)}
 ${x} Script : github.com/adiixyz/adyybotz
 ${x} Group Bot : s.id/adyybotzgc
 
-Type ${prefix}command if your whatsapp does not support Button and list
-`
-sendButImage(from, `${mana}`, `© adyy x gada pacar:v`, thubnya, [
+Type ${prefix}command if your whatsapp does not support Button and list`
+sendButVideo(from, `${mana}`, `© adyy x gada pacar:v`, thubnya, [
           {
             buttonId: `buttonmenu`,
             buttonText: {
