@@ -327,7 +327,7 @@ const buttonsTemp = [
         ]
 
         const textTemplateButtons = (from, text, footer, buttons) => {
-            return conn.sendMessage(from, { text: text, footer: footer, templateButtons: buttons })
+            conn.sendMessage(from, { text: text, footer: footer, templateButtons: buttons })
         }
 
 // xx
