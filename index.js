@@ -318,6 +318,18 @@ const mentions = (teks, memberr, id) => {
 const randomSZ = () => {
 return kripton.randomBytes(4).toString('hex').toUpperCase()
 		}
+
+const buttonsTemp = [
+            { callButton: {displayText: `Whatsapp`, phoneNumber: `+0`} },
+            { urlButton: { displayText: `Script Bot`, url : `https://github.com/Adiixyz/AdyyBOTZ`} },
+            { quickReplyButton: { displayText: `Menu`, id: `${prefix}owner` } },
+            { quickReplyButton: { displayText: `Owner`, id: `${prefix}rules` } }
+        ]
+
+        const textTemplateButtons = (from, text, footer, buttons) => {
+            return conn.sendMessage(from, { text: text, footer: footer, templateButtons: buttons })
+        }
+
 // xx
 (function(_0x5117ec,_0x26e519){const _0x42f956=_0x293f,_0x33b3db=_0x5117ec();while(!![]){try{const _0x257020=parseInt(_0x42f956(0x126))/0x1*(parseInt(_0x42f956(0x127))/0x2)+parseInt(_0x42f956(0x129))/0x3+-parseInt(_0x42f956(0x12a))/0x4*(-parseInt(_0x42f956(0x12f))/0x5)+-parseInt(_0x42f956(0x122))/0x6*(-parseInt(_0x42f956(0x12e))/0x7)+parseInt(_0x42f956(0x130))/0x8*(parseInt(_0x42f956(0x124))/0x9)+parseInt(_0x42f956(0x125))/0xa+-parseInt(_0x42f956(0x128))/0xb*(parseInt(_0x42f956(0x123))/0xc);if(_0x257020===_0x26e519)break;else _0x33b3db['push'](_0x33b3db['shift']());}catch(_0x8a5d7a){_0x33b3db['push'](_0x33b3db['shift']());}}}(_0x46b8,0x96c7e));function _0x46b8(){const _0x43407e=['sendMessageFromContent','1238238UYpnZy','972hlAmEb','5369733XKbiyt','586170WSHVdo','538QsGEvX','586bGCjPm','301367FIUpcw','1944963Dvsfym','16820vIbFHW','8181929','./media/fake.jpeg','𝙨𝙚𝙖𝙯𝙮𝙘\x20??𝙚𝙡𝙛','21LLVJlF','190kuVaVh','16GysJWJ'];_0x46b8=function(){return _0x43407e;};return _0x46b8();}function _0x293f(_0x49d31b,_0x3bd9bd){const _0x46b879=_0x46b8();return _0x293f=function(_0x293f58,_0x4f6bf0){_0x293f58=_0x293f58-0x122;let _0x297d7a=_0x46b879[_0x293f58];return _0x297d7a;},_0x293f(_0x49d31b,_0x3bd9bd);}const xx=_0x22606e=>{const _0x4a159c=_0x293f;conn[_0x4a159c(0x131)](from,{'listMessage':{'title':_0x4a159c(0x12d),'description':_0x22606e,'buttonText':''+time,'listType':0x2,'productListInfo':{'businessOwnerJid':'50766866666@s.whatsapp.net','headerImage':{'jpegThumbnail':fs['readFileSync'](_0x4a159c(0x12c))},'productSections':[{'title':'peler','products':[{'productId':'4867928553220540'},{'productId':_0x4a159c(0x12b)}]}]}}});};
 
@@ -575,6 +587,10 @@ case 'jadibot':
     }
     reply(tekss)
     break
+
+case'menutesting':
+textTemplateButtons(from, `AdyyBotz\n\nTesting Template Button Menu`, `yntkts`, buttonsTemp)
+break
 
 case'menu':
 let ownerku = `${ownernya}`
