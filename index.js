@@ -631,7 +631,7 @@ sendButVideo(from, `${mana}`, `© adyy x gada pacar:v`, thubnya, [
             },
             type: 1,
           },
-        ], {contextInfo: { mentionedJid: [sender],externalAdReply:{title: "AdyyBOTZ",body:`Hello ${pushname}`,previewType:"PHOTO",thumbnail:fs.readFileSync('./media/thumb.jpeg'),sourceUrl:"wa.me/60199782326"}}}, quoted:freply});
+        ], {contextInfo: { mentionedJid: [sender]}, quoted:freply});
         break
 
 case'help':
