@@ -300,7 +300,7 @@ const isUrl = (url) => {
         return url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%.+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%+.~#?&/=]*)/, 'gi'))
 }
 const reply = (teks) => {
-        conn.sendMessage(from, teks, text, {quoted:mek, {contextInfo: externalAdReply:{title: "AdyyBotz",body:`Hello ${pushname}`,previewType:"PHOTO",thumbnail:fs.readFileSync('./media/thumb.jpeg'),sourceUrl:""}}})
+        conn.sendMessage(from, teks, text, {quoted:mek})
 }
 const katalog = (teks) => {
              res = conn.prepareMessageFromContent(from,{ "orderMessage": { "itemCount": 321, "message": teks, "footerText": "*_© Adyy_*", "thumbnail": imgmenu, "surface": 'CATALOG' }}, {quoted:fkontak})
