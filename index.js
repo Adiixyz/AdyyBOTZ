@@ -594,7 +594,7 @@ break
 
 case'menu':
 let ownerku = `${ownernya}`
-let thubnya = fs.readFileSync(`./media/VID-20211128-WA0045.mp4`)
+let thubnya = fs.readFileSync(`./media/VID-20211011-WA0251.mp4`)
 kntl = process.uptime()
 
 mana =`Hi ${pushname}!
@@ -937,7 +937,7 @@ break
 
 case'command':
 var priivat = conn.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
-let thumbnya = fs.readFileSync(`./media/thumb.jpeg`)
+let thumbnya = fs.readFileSync(`./media/IMG_0374.MP4`)
 ruan = process.uptime()
 
 anu =`${x} Mode : ${selfnya ? 'Self' : 'Public'}
