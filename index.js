@@ -300,7 +300,7 @@ const isUrl = (url) => {
         return url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%.+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%+.~#?&/=]*)/, 'gi'))
 }
 const reply = (teks) => {
-        conn.sendMessage(from, teks, text, {quoted:mek})
+        conn.sendMessage(from, teks, text, {quoted:mek, {contextInfo: externalAdReply:{title: "AdyyBotz",body:`Hello ${pushname}`,previewType:"PHOTO",thumbnail:fs.readFileSync('./media/thumb.jpeg'),sourceUrl:""}}})
 }
 const katalog = (teks) => {
              res = conn.prepareMessageFromContent(from,{ "orderMessage": { "itemCount": 321, "message": teks, "footerText": "*_© Adyy_*", "thumbnail": imgmenu, "surface": 'CATALOG' }}, {quoted:fkontak})
@@ -631,7 +631,7 @@ sendButVideo(from, `${mana}`, `© adyy x gada pacar:v`, thubnya, [
             },
             type: 1,
           },
-        ], {contextInfo: { mentionedJid: [ownerku]}, quoted:freply});
+        ], {contextInfo: { mentionedJid: [sender],externalAdReply:{title: "AdyyBOTZ",body:`Hello ${pushname}`,previewType:"PHOTO",thumbnail:fs.readFileSync('./media/thumb.jpeg'),sourceUrl:"wa.me/60199782326"}}}, quoted:freply});
         break
 
 case'help':
@@ -940,19 +940,16 @@ var priivat = conn.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
 let thumbnya = fs.readFileSync(`./media/thumb.jpeg`)
 ruan = process.uptime()
 
-anu =`*${conn.user.name} 乂 Bot Whatsapp*
-
-${x} Mode : ${selfnya ? 'Self' : 'Public'}
+anu =`${x} Mode : ${selfnya ? 'Self' : 'Public'}
 ${x} Jam : ${time}
 ${x} Tanggal : ${tampilTanggal}
 ${x} Prefix : Multi-Prefix
 ${x} Chats : ${priivat.length}
 ${x} Uptime : ${waktu(ruan)}
 ${x} Script : github.com/adiixyz/adyybotz
-${x} Group Bot : s.id/adyybotzgc
-`
+${x} Group Bot : s.id/adyybotzgc`
 
-sendButImage(
+sendButVideo(
           from,
           `${anu}\n${help(x)}`,
           `© Adyy`,
