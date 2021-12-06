@@ -1003,6 +1003,66 @@ ${x} #citacita\`\`\`
                               "title": "Cantik",
                               "rowId": `cantik`
                            },
+                           {
+                              "title": "Jelek",
+                              "rowId": `jelek`
+                           },
+                           {
+                              "title": "Hebat",
+                              "rowId": `hebat`
+                           },
+                           {
+                              "title": "VVibu",
+                              "rowId": `wibu`
+                           },
+                           {
+                              "title": "Pakboy",
+                              "rowId": `pakboy`
+                           },
+                           {
+                              "title": "Pakgirl",
+                              "rowId": `pakgirl`
+                           },
+                           {
+                              "title": "Sange",
+                              "rowId": `sange`
+                           },
+                           {
+                              "title": "Nolep",
+                              "rowId": `nolep`
+                           },
+                           {
+                              "title": "Jahat",
+                              "rowId": `jahat`
+                           },
+                           {
+                              "title": "Baik",
+                              "rowId": `baik`
+                           },
+                           {
+                              "title": "Wangy",
+                              "rowId": `wangy`
+                           },
+                           {
+                              "title": "Pemenang",
+                              "rowId": `pemenang yntkts`
+                           },
+                           {
+                              "title": "Kapankah",
+                              "rowId": `kapankah saya mati`
+                           },
+                           {
+                              "title": "Rate",
+                              "rowId": `rate`
+                           },
+                           {
+                              "title": "Apakah",
+                              "rowId": `apakah saya gay?`
+                           },
+                           {
+                              "title": "citacita (error)",
+                              "rowId": `citacita`
+                           }
                         ]
                      }],
  listType: 1
