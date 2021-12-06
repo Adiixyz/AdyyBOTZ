@@ -737,6 +737,7 @@ case'buttonmenu':
 conn.sendMessage(from, listMsg, MessageType.listMessage, {contextInfo: { mentionedJid: [stod]},quoted:fkontak})
 break
 
+
 case'ownermenu':
 menu =`\`\`\`「 OWNER MENU ツ 」
 
@@ -760,7 +761,9 @@ ${x} #leave
 ${x} #get
 ${x} #setnama
 ${x} #join
-${x} #status\`\`\`
+${x} #status
+
+Untuk ${command} versi list silahkan ketik #list${command}\`\`\`
 `
 reply(menu)
 break
@@ -801,7 +804,11 @@ reply(menu)
 break
 
 case'animemenu':
-menu =`\`\`\`「 ANIME MENU ツ 」
+let tod = `${sender}`
+ listMsg = {
+ buttonText: 'CHOOSE',
+ footerText: 'Yo yang males ngetik bisa pilih dibawah',
+ description: `\`\`\`「 ANIME MENU ツ 」
 
 ${x} #waifu
 ${x} #loli
@@ -809,8 +816,40 @@ ${x} #husbu
 ${x} #neko
 ${x} #anime
 ${x} #elaina\`\`\`
-`
-reply(menu)
+`,
+ sections: [
+                     {
+                      "title": `${tampilTanggal} | ${time}`,
+ rows: [
+                          {
+                              "title": "Waifu",
+                              "rowId": `waifu`
+                           },
+                           {
+                              "title": "Loli",
+                              "rowId": `loli`
+                           },
+                           {
+                              "title": "Husbu",
+                              "rowId": `husbu`
+                           },
+                           {
+                              "title": "Neko",
+                              "rowId": `neko`
+                           },
+                           {
+                              "title": "Anime",
+                              "rowId": `anime`
+                           },
+                           {
+                              "title": "Elaina",
+                              "rowId": `elaina`
+                           }
+                        ]
+                     }],
+ listType: 1
+}
+conn.sendMessage(from, listMsg, MessageType.listMessage, {contextInfo: { mentionedJid: [tod]},quoted:mek})
 break
 
 case'othermenu':
@@ -884,16 +923,40 @@ reply(menu)
 break
 
 case'gamemenu':
-menu =`\`\`\`「 GAME MENU ツ 」
+let sod = `${sender}`
+ listMsg = {
+ buttonText: 'CHOOSE',
+ footerText: 'Yo yang males ngetik bisa pilih dibawah',
+ description: `\`\`\`「 GAME MENU ツ 」
 
 ${x} #suit batu/kertas/gunting
 ${x} #tebakgambar\`\`\`
-`
-reply(menu)
+`,
+ sections: [
+                     {
+                      "title": `${tampilTanggal} | ${time}`,
+ rows: [
+                          {
+                              "title": "Suit",
+                              "rowId": `suit`
+                           },
+                           {
+                              "title": "Tebakgambar",
+                              "rowId": `tebakgambar`
+                           }
+                        ]
+                     }],
+ listType: 1
+}
+conn.sendMessage(from, listMsg, MessageType.listMessage, {contextInfo: { mentionedJid: [sod]},quoted:mek})
 break
 
 case'funmenu':
-menu =`\`\`\`「 FUN MENU ツ 」
+let uod = `${sender}`
+ listMsg = {
+ buttonText: 'CHOOSE',
+ footerText: 'Yo yang males ngetik bisa pilih dibawah',
+ description: `\`\`\`「 FUN MENU ツ 」
 
 ${x} #readmore
 ${x} #jadian
@@ -915,8 +978,36 @@ ${x} #kapankah
 ${x} #rate
 ${x} #apakah
 ${x} #citacita\`\`\`
-`
-reply(menu)
+`,
+ sections: [
+                     {
+                      "title": `${tampilTanggal} | ${time}`,
+ rows: [
+                          {
+                              "title": "Readmore",
+                              "rowId": `readmore`
+                           },
+                           {
+                              "title": "Jadian",
+                              "rowId": `jadian`
+                           },
+                           {
+                              "title": "Ganteng",
+                              "rowId": `ganteng`
+                           },
+                           {
+                              "title": "Beban",
+                              "rowId": `beban`
+                           },
+                           {
+                              "title": "Cantik",
+                              "rowId": `cantik`
+                           },
+                        ]
+                     }],
+ listType: 1
+}
+conn.sendMessage(from, listMsg, MessageType.listMessage, {contextInfo: { mentionedJid: [uod]},quoted:mek})
 break
 
 case'storagemenu':
