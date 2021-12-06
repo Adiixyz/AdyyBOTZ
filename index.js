@@ -884,7 +884,8 @@ break
 case'gamemenu':
 menu =`\`\`\`「 GAME MENU ツ 」
 
-${x} #suit batu/kertas/gunting\`\`\`
+${x} #suit batu/kertas/gunting
+${x} #tebakgambar\`\`\`
 `
 reply(menu)
 break
@@ -1127,9 +1128,39 @@ conn.sendMessage(from, cita2, audio, {mimetype: 'audio/mp4', ptt:true, quoted: m
 break*/
 
 case "ssweb":
-if (!q) return reply('link???')
-atetepe = await getBuffer(`https://bx-hunter.herokuapp.com/api/ssweb?url=${q}&apikey=Ikyy69`)
+reply(mess.wait)
+ini_url = args.join(" ")
+atetepe = await getBuffer(`https://docs-jojo.herokuapp.com/api/ssweb?url=${ini_url}`)
 conn.sendMessage(from, atetepe, image, { quoted: mek })
+	break
+
+case "tebakgambar":
+anu = await fetchJson(`https://rest-api-megumin1.herokuapp.com/api/kuis/tebakgambar?apikey=beta`)
+gambar = await getBuffer(anu.result.images)
+   setTimeout( () => {
+   reply('*➸ Jawaban :* '+anu.result.jawaban, text, {quoted: mek}) // ur cods
+   }, 60000) // 1000 = 1s,
+   setTimeout( () => {
+   reply('_10 Detik lagi…_', text) // ur cods
+   }, 30000) // 1000 = 1s,
+   setTimeout( () => {
+   reply('_30 Detik lagi_…', text) // ur cods
+   }, 10000) // 1000 = 1s,
+   setTimeout( () => {
+   reply('_60 Detik lagi_…', text) // ur cods
+   }, 2500) // 1000 = 1s,
+   setTimeout( () => {
+   conn.sendMessage(from, gambar, image, {quoted: mek }) // ur cods
+   }, 0) // 1000 = 1s,
+   break
+
+case 'update':
+kentod =`[UPDATES]
+
+Time : 8:06 AM | Monday 6 Dec
+Update : add feature tebakgambar (kinda work) | fix ssweb
+`
+reply(kentod)
 break
 
 case 'wangy':
