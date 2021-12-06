@@ -594,13 +594,16 @@ break
 
 case'menu':
 let ownerku = `${ownernya}`
-let thubnya = fs.readFileSync(`./media/VID-20211011-WA0251.mp4`)
+let thubnya = fs.readFileSync(`./media/IMG_0374.MP4`)
 kntl = process.uptime()
-
+stst = await conn.getStatus(`${sender.split('@')[0]}@c.us`)
+stst = stst.status == 401 ? 'unknown' : stst.status
+	
 mana =`Hi ${pushname}!
 
 ${x} Sender : ${sender}
 ${x} Your API : wa.me/${sender.split('@')[0]}
+${x} Your Bio : ${stst}
 ${x} Mode : ${selfnya ? 'Self' : 'Public'}
 ${x} Jam : ${time}
 ${x} Tanggal : ${tampilTanggal}
@@ -659,6 +662,18 @@ const buttonwws = [
 }
 conn.sendMessage(from, buttonMessagwwe, MessageType.buttonsMessage,{quoted: fkontak})
 break
+
+case 'tagme':
+var nomqm = mek.participant
+tagu = `@${nomqm.split('@s.whatsapp.net')[0]}`
+conn.sendMessage(from, tagu, text, { quoted: freply, contextInfo: { forwardingScore: 508, isForwarded: true, mentionedJid: [nomqm]}})
+break
+
+case 'd':
+				case 'del':
+				case 'delete':
+					conn.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
+					break
 
 case'buttonmenu':
  let stod = `${sender}`
@@ -781,6 +796,8 @@ break
 case'groupmenu':
 menu =`\`\`\`「 GROUP MENU ツ 」
 
+${x} #tagme
+${x} #delete
 ${x} #afk
 ${x} #kick
 ${x} #add
@@ -1101,7 +1118,8 @@ ${x} Prefix : Multi-Prefix
 ${x} Chats : ${priivat.length}
 ${x} Uptime : ${waktu(ruan)}
 ${x} Script : github.com/adiixyz/adyybotz
-${x} Group Bot : s.id/adyybotzgc`
+${x} Group Bot : s.id/adyybotzgc
+`
 
 sendButVideo(
           from,
@@ -1156,8 +1174,9 @@ break
 
 case 'afk':
 aeefkeh = args.join(' ')
-reply(`${pushname} is now AFK : ${aeefkeh}
-in ${time}`)
+reply(`
+${pushname} is now AFK : ${aeefkeh}
+`)
 break
 
 case 'group': 
