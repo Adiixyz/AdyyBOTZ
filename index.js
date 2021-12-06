@@ -778,6 +778,7 @@ break
 case'groupmenu':
 menu =`\`\`\`「 GROUP MENU ツ 」
 
+${x} #afk
 ${x} #kick
 ${x} #add
 ${x} #group [button]
@@ -815,6 +816,7 @@ break
 case'othermenu':
 menu =`\`\`\`「 OTHER MENU ツ 」
 
+${x} #wame
 ${x} #sherelock
 ${x} #listgroup
 ${x} #google
@@ -995,6 +997,16 @@ case 'runtime':
 runtime = process.uptime()
 teks = `${waktu(runtime)}`
 reply(`${teks}`)
+break
+
+case 'wame':
+reply(`wa.me/${sender.split('@')[0]}`)
+break
+
+case 'afk':
+aeefkeh = args.join(' ')
+reply(`${pushname} is now AFK : ${aeefkeh}
+in ${time}`)
 break
 
 case 'group': 
