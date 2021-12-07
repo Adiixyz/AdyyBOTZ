@@ -346,6 +346,26 @@ console.log(e)
 })
 })
 }
+const sendStickerFromUrl = async(to, url) => {
+                var names = Date.now() / 10000;
+                var download = function (uri, filename, callback) {
+                    request.head(uri, function (err, res, body) {
+                        request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                    });
+                };
+                download(url, './stik' + names + '.png', async function () {
+                    console.log('selesai');
+                    let filess = './stik' + names + '.png'
+                    let asw = './stik' + names + '.webp'
+                    exec(`ffmpeg -i ${filess} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${asw}`, (err) => {
+                        let media = fs.readFileSync(asw)
+                        conn.sendMessage(to, media, MessageType.sticker,{quoted:mek})
+                        fs.unlinkSync(filess)
+                        fs.unlinkSync(asw)
+                    });
+                });
+            }
+
 const sendMediaURL = async(to, url, text="", mids=[]) =>{
 if(mids.length > 0){
 text = normalizeMention(to, text, mids)
@@ -614,7 +634,7 @@ ${x} Rest Api : belom dipersembahkan
 
 _Type ${prefix}command if your whatsapp does not support Button and list_`
 
-await conn.sendMessage(from, Zmenu, sticker, {quoted:mek})
+await sendStickerFromUrl(from, `https://i.ibb.co/M5P6r24/4b2200d3a16c.png`)
 sendButVideo(from, `${mana}`, `© adyy x gada pacar:v`, thubnya, [
           {
             buttonId: `buttonmenu`,
