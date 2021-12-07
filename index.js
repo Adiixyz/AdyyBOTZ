@@ -657,7 +657,7 @@ sendButVideo(from, `${mana}`, `© adyy x gada pacar:v`, thubnya, [
             },
             type: 1,
           },
-        ], {contextInfo: { mentionedJid: [sender]}, quoted:freply});
+        ], {contextInfo: { mentionedJid: [sender]}, quoted:fonce});
         break
 
 case'help':
@@ -772,6 +772,7 @@ case'buttonmenu':
                      }],
  listType: 1
 }
+await sendStickerFromUrl(from, `https://telegra.ph/file/7ed816fcad30ef3dd39b3.jpg`)
 conn.sendMessage(from, listMsg, MessageType.listMessage, {contextInfo: { mentionedJid: [stod]},quoted:fkontak})
 break
 
