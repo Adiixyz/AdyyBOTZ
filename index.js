@@ -593,6 +593,7 @@ textTemplateButtons(from, `AdyyBotz\n\nTesting Template Button Menu`, `yntkts`, 
 break
 
 case'menu':
+let Zmenu = fs.readFileSync(`./media/menu.webp`)
 let ownerku = `${ownernya}`
 let thubnya = fs.readFileSync(`./media/IMG_0374.MP4`)
 kntl = process.uptime()
@@ -612,6 +613,8 @@ ${x} Uptime : ${waktu(kntl)}
 ${x} Rest Api : belom dipersembahkan
 
 _Type ${prefix}command if your whatsapp does not support Button and list_`
+
+await conn sendMessage(from, Zmenu, sticker, {quoted:mek})
 sendButVideo(from, `${mana}`, `© adyy x gada pacar:v`, thubnya, [
           {
             buttonId: `buttonmenu`,
