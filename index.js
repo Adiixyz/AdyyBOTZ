@@ -2334,7 +2334,7 @@ ${x} *Ditonton* : ${res.all[0].views}
 ${x} *Durasi* : ${res.all[0].timestamp}
 ${x} *Channel* : ${res.all[0].author.name}`
 
-buttons = [{buttonId:`buttonvideo ${res.all[0].url}`,buttonText:{displayText:'🎥VIDEO'},type:1},{buttonId:`buttonmusic ${res.all[0].url}`,buttonText:{displayText:'🎵AUDIO'},type:1}]
+buttons = [{buttonId:`del`,buttonText:{displayText:'BATAL'},type:1},{buttonId:`buttonvideo ${res.all[0].url}`,buttonText:{displayText:'🎥VIDEO'},type:1},{buttonId:`buttonmusic ${res.all[0].url}`,buttonText:{displayText:'🎵AUDIO'},type:1}]
 imageMessage = (await conn.prepareMessageMedia({url:res.all[0].image},'imageMessage',{thumbnail:Buffer.alloc(0)})).imageMessage
 buttonsMessage = {contentText: thumbInfo,footerText:'Silahkan Pilih Jenis File Dibawah Ini',imageMessage,buttons,headerType:4}
 inibut = await conn.prepareMessageFromContent(from,{buttonsMessage},{})
@@ -2365,7 +2365,7 @@ res = await TiktokDownloader(`${q}`).catch(e => {
 reply('_[ ! ] Server Sedang Error_')
 })
 console.log(res)
-sendMediaURL (from, `${res.result.nowatermark}`,'Tiktok No Watermark')
+sendMediaURL (from, `${res.result.nowatermark}`,'[TIKTOK DOWNLOADER]\n\nRequested by you\nType : no watermark')
 break
 
 case 'ig':
