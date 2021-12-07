@@ -1521,7 +1521,7 @@ break
 
 case 'play':
 if (args.length === 0) {
-txtna = `*「 YTMP3 DOWNLOADER 」*\nSilahkan Balas pesan ini lalu ketik query atau link`
+txtna = `oi ${pushname} querynya mana??\n\ncontoh : .play ${pushname}`
 conn.sendMessage(from, txtna, text, { quoted: mek, messageId: command+'GRUP '+randomSZ() })
 }
 var srch = args.join('')
