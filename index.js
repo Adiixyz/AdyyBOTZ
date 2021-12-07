@@ -1117,8 +1117,6 @@ ${x} Tanggal : ${tampilTanggal}
 ${x} Prefix : Multi-Prefix
 ${x} Chats : ${priivat.length}
 ${x} Uptime : ${waktu(ruan)}
-${x} Script : github.com/adiixyz/adyybotz
-${x} Group Bot : s.id/adyybotzgc
 `
 
 sendButVideo(
@@ -1146,7 +1144,7 @@ sendButVideo(
 break
 
 case'sc':
-reply('Bot ini menggunakan sc https://github.com/Adiixyz/AdyyBOTZ')
+reply('Bot ini menggunakan sc https://github.com/')
 break
 
 case'donasi':
