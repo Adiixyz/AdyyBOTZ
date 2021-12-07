@@ -614,7 +614,7 @@ ${x} Rest Api : belom dipersembahkan
 
 _Type ${prefix}command if your whatsapp does not support Button and list_`
 
-await conn sendMessage(from, Zmenu, sticker, {quoted:mek})
+await conn.sendMessage(from, Zmenu, sticker, {quoted:mek})
 sendButVideo(from, `${mana}`, `© adyy x gada pacar:v`, thubnya, [
           {
             buttonId: `buttonmenu`,
