@@ -817,7 +817,7 @@ sendButMessage(from, `${mana}`, `© adyy`, thubnya, [
             },
             type: 1,
           },
-        ], {contextInfo: { mentionedJid: [sender]});
+        ], {contextInfo: { mentionedJid: [sender]}});
         break
 
 case'help':
