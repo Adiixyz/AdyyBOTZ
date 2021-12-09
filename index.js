@@ -449,7 +449,7 @@ footerText: desc1,
 buttons: but,
 headerType: 1
 }
-conn.sendMessage(id, buttonMessage, MessageType.buttonsMessage, {quoted:fkontak}, options)
+conn.sendMessage(id, buttonMessage, MessageType.buttonsMessage, options)
 }
 const sendButImage = async(id, text1, desc1, gam1, but = [], options = {}) => {
 kma = gam1
@@ -620,29 +620,189 @@ kntl = process.uptime()
 stst = await conn.getStatus(`${sender.split('@')[0]}@c.us`)
 stst = stst.status == 401 ? 'unknown' : stst.status
 	
-mana =`Hi ${pushname}!
+mana =`*┏━──────────────*
+*┃➥ Library : @adiwajshing/baileys*
+*┃➥ Bot Name : AdyyBotz*
+*┃➥ Whatsapp Bot Ver : 0.0.1*
+*┃➥ Creator : Adii*
+*┃➥ Runtime : ${waktu(kntl)}*
+*┃➥ Date : ${tampilTanggal}*
+*┃➥ Time : ${time}*
+*┃➥ Server : replit.com*
+*┃➥ User : ${pushname}
+*┃➥ Bio : ${stst}
+*┗━──────────────* 
 
-${x} Sender : ${sender}
-${x} Your API : wa.me/${sender.split('@')[0]}
-${x} Your Bio : ${stst}
-${x} Mode : ${selfnya ? 'Self' : 'Public'}
-${x} Jam : ${time}
-${x} Tanggal : ${tampilTanggal}
-${x} Prefix : Multi-Prefix
-${x} Uptime : ${waktu(kntl)}
-${x} Rest Api : belom dipersembahkan
+*⌜ O W N E R ⌟:*
+*┏━──────────────*
+${x} > [eval]*
+${x} => [eval async]*
+${x} $ [code]*
+${x} #q*
+${x} #view [read once]*
+${x} #term [code]*
+${x} #upswteks*
+${x} #upswvideo*
+${x} #upswimage*
+${x} #mode [button]*
+${x} #setprefix [button]*
+${x} #setfakeimg [reply]*
+${x} #setthumb [reply]*
+${x} #bc*
+${x} #clearall*
+${x} $setpp*
+${x} #leave*
+${x} #get*
+${x} #setnama*
+${x} #join*
+${x} #status*
+*┗━──────────────*
 
-_Type ${prefix}command if your whatsapp does not support Button and list_`
+*⌜ J A D I B O T ⌟:*
+*┏━──────────────*
+${x} #jadibot*
+${x} #stopjadibot*
+${x} #listbot*
+*┗━──────────────* 
 
+*⌜ G R O U P ⌟:*
+*┏━──────────────*
+${x} #tagme*
+${x} #delete*
+${x} #afk*
+${x} #kick*
+${x} #add*
+${x} #group [button]*
+${x} #listadmin*
+${x} #tagall*
+${x} #hidetag*
+${x} #totag*
+${x} #antiviewonce [button]*
+${x} #sider*
+${x} #rulesgroup*
+${x} #promote*
+${x} #demote*
+${x} #revoke*
+${x} #getname*
+${x} #groupinfo*
+${x} #linkgc*
+${x} #isbaileys*
+*┗━──────────────* 
+
+*⌜ W E A B O O ⌟:*
+*┏━──────────────*
+${x} #waifu*
+${x} #loli*
+${x} #husbu*
+${x} #neko*
+${x} #anime*
+${x} #elaina*
+*┗━──────────────* 
+
+*⌜ O T H E R ⌟:*
+*┏━──────────────*
+${x} #wame*
+${x} #sherelock*
+${x} #listgroup*
+${x} #google*
+${x} #runtime*
+${x} #ping*
+${x} #inspect*
+${x} #pinterest*
+${x} #getpic*
+${x} #linkwa*
+${x} #translate*
+${x} #repeat [teks*4]*
+${x} #cecan*
+${x} #cogan*
+${x} #darkjokes*
+${x} #kontak*
+${x} #ssweb*
+${x} #sc*
+${x} #donasi*
+*┗━──────────────* 
+
+*⌜ S T I C K E R ⌟:*
+*┏━──────────────*
+${x} #take*
+${x} #stiker (error)*
+${x} #toimg*
+${x} #detikvideo*
+${x} #detikvn*
+${x} #tomp4*
+${x} #attp*
+${x} #emoji*
+*┗━──────────────* 
+
+*⌜ D O W N L O A D E R ⌟:*
+*┏━──────────────*
+${x} #playstore*
+${x} #play*
+${x} #ytdl*
+${x} #tiktok*
+${x} #ig [link]*
+${x} #video*
+${x} #igstory*
+${x} #lirik*
+${x} #ytmp3*
+${x} #ytmp4*
+${x} #ytsearch*
+${x} #ytdl*
+*┗━──────────────* 
+
+*⌜ R A N D O M ⌟:*
+*┏━──────────────*
+${x} #wallpapertech
+*┗━──────────────* 
+
+*⌜ G A M E ⌟:*
+*┏━──────────────*
+${x} #suit*
+${x} #tebakgambar*
+*┗━──────────────* 
+
+*⌜ F U N ⌟:*
+*┏━──────────────*
+${x} #readmore*
+${x} #jadian*
+${x} #ganteng*
+${x} #beban*
+${x} #cantik*
+${x} #jelek*
+${x} #hebat*
+${x} #wibu*
+${x} #pakboy*
+${x} #pakgirl*
+${x} #sange*
+${x} #nolep*
+${x} #jahat*
+${x} #baik*
+${x} #wangy*
+${x} #pemenang*
+${x} #kapankah*
+${x} #rate*
+${x} #apakah*
+${x} #citacita*
+*┗━──────────────* 
+
+*⌜ S T O R A G E ⌟:*
+*┏━──────────────*
+${x} #addimg*
+${x} #getimg*
+${x} #listimg*
+${x} #liststicker*
+${x} #addsticker*
+${x} #getsticker*
+${x} #addvn*
+${x} #getvn*
+${x} #listvn*
+${x} #getvideo*
+${x} #listvideo*
+${x} #addvideo*
+*┗━──────────────* 
+`
 await sendStickerFromUrl(from, `https://i.ibb.co/M5P6r24/4b2200d3a16c.png`)
-sendButVideo(from, `${mana}`, `© adyy x gada pacar:v`, thubnya, [
-          {
-            buttonId: `buttonmenu`,
-            buttonText: {
-              displayText: `ALL COMMANDS`,
-            },
-            type: 1,
-          },
+sendButMessage(from, `${mana}`, `© adyy`, thubnya, [
           {
             buttonId: `donasi`,
             buttonText: {
@@ -657,7 +817,7 @@ sendButVideo(from, `${mana}`, `© adyy x gada pacar:v`, thubnya, [
             },
             type: 1,
           },
-        ], {contextInfo: { mentionedJid: [sender]}, quoted:fonce});
+        ], {contextInfo: { mentionedJid: [sender]});
         break
 
 case'help':
@@ -810,9 +970,9 @@ break
 case'jadibotmenu':
 menu =`\`\`\`「 JADIBOT MENU ツ 」
 
-${x} #jadibot
-${x} #stopjadibot
-${x} #listbot\`\`\`
+#jadibot
+#listjadibot
+#stopjadibot\`\`\`
 `
 reply(menu)
 break
@@ -2329,13 +2489,13 @@ reply('_[ ! ] Error Yang Anda Masukan Tidak Ada_')
 })
 let thumbInfo = `*YOUTUBE PLAY▶️*
                
-${x} *Judul* : ${res.all[0].title}
-${x} *Publikasi* : ${res.all[0].ago}
-${x} *Ditonton* : ${res.all[0].views}
-${x} *Durasi* : ${res.all[0].timestamp}
-${x} *Channel* : ${res.all[0].author.name}`
+*Judul* : ${res.all[0].title}
+*Publikasi* : ${res.all[0].ago}
+*Ditonton* : ${res.all[0].views}
+*Durasi* : ${res.all[0].timestamp}
+*Channel* : ${res.all[0].author.name}`
 
-buttons = [{buttonId:`del`,buttonText:{displayText:'BATAL'},type:1},{buttonId:`buttonvideo ${res.all[0].url}`,buttonText:{displayText:'🎥VIDEO'},type:1},{buttonId:`buttonmusic ${res.all[0].url}`,buttonText:{displayText:'🎵AUDIO'},type:1}]
+buttons = [{buttonId:`delete`,buttonText:{displayText:'BATAL'},type:1},{buttonId:`buttonvideo ${res.all[0].url}`,buttonText:{displayText:'🎥VIDEO'},type:1},{buttonId:`buttonmusic ${res.all[0].url}`,buttonText:{displayText:'🎵AUDIO'},type:1}]
 imageMessage = (await conn.prepareMessageMedia({url:res.all[0].image},'imageMessage',{thumbnail:Buffer.alloc(0)})).imageMessage
 buttonsMessage = {contentText: thumbInfo,footerText:'Silahkan Pilih Jenis File Dibawah Ini',imageMessage,buttons,headerType:4}
 inibut = await conn.prepareMessageFromContent(from,{buttonsMessage},{})
