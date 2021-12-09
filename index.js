@@ -802,7 +802,7 @@ ${x} #addvideo*
 *┗━──────────────* 
 `
 await sendStickerFromUrl(from, `https://i.ibb.co/M5P6r24/4b2200d3a16c.png`)
-sendButMessage(from, `${mana}`, `© adyy`, thubnya, [
+sendButMessage(from, `${mana}`, `© adyy`, [
           {
             buttonId: `donasi`,
             buttonText: {
