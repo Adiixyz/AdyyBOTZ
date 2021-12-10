@@ -35,6 +35,37 @@ const starts = async (conn = new WAConnection()) => {
         require('./index.js')(conn, message)
     })
     
+    conn.on('group-participants-update', async (anu) => {
+		//if (!welkom.includes(anu.jid)) return
+		try {
+			const mdata = await conn.groupMetadata(anu.jid)
+			console.log(anu)
+			if (anu.action == 'add') {
+				num = anu.participants[0]
+				try {
+					ppimg = await conn.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
+				} catch {
+					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+				}
+				teks = `Halo @${num.split('@')[0]}\nSelamat datang di group *${mdata.subject}*`
+				let buff = await getBuffer(ppimg)
+				conn.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
+			} else if (anu.action == 'remove') {
+				num = anu.participants[0]
+				try {
+					ppimg = await client.getProfilePicture(`${num.split('@')[0]}@c.us`)
+				} catch {
+					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+				}
+				teks = `Sayonara @${num.split('@')[0]}👋`
+				let buff = await getBuffer(ppimg)
+				conn.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
+			}
+		} catch (e) {
+			console.log('Error : %s', color(e, 'red'))
+		}
+	})
+
     conn.on('group-update', async (anu) => {
 		const metdata = await conn.groupMetadata(anu.jid)
     	const fkontakk = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(anu.jid ? { remoteJid: '6283136505591-1604595598@g.us' } : {})}, message: { "contactMessage":{"displayName": `${metdata.subject}`,"vcard":`BEGIN:VCARD\nVERSION:3.0\nN:2;Adii;;;\nFN:Adii\nitem1.TEL;waid=60199782326:60199782326\nitem1.X-ABLabel:Mobile\nEND:VCARD` }}}
