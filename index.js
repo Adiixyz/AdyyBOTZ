@@ -628,9 +628,8 @@ mana =`*┏━──────────────*
 *┃➥ Runtime : ${waktu(kntl)}*
 *┃➥ Date : ${tampilTanggal}*
 *┃➥ Time : ${time}*
-*┃➥ Server : replit.com*
-*┃➥ User : ${pushname}
-*┃➥ Bio : ${stst}
+*┃➥ User : ${pushname}*
+*┃➥ Bio : ${stst}*
 *┗━──────────────* 
 
 *⌜ O W N E R ⌟:*
@@ -689,7 +688,7 @@ ${x} #linkgc*
 ${x} #isbaileys*
 *┗━──────────────* 
 
-*⌜ W E A B O O ⌟:*
+*⌜ W I B U ⌟:*
 *┏━──────────────*
 ${x} #waifu*
 ${x} #loli*
@@ -801,8 +800,7 @@ ${x} #listvideo*
 ${x} #addvideo*
 *┗━──────────────* 
 `
-await sendStickerFromUrl(from, `https://i.ibb.co/M5P6r24/4b2200d3a16c.png`)
-sendButMessage(from, `${mana}`, `© adyy`, [
+sendButMessage(from, `${mana}`, `adyy.bo tz`, [
           {
             buttonId: `donasi`,
             buttonText: {
@@ -813,7 +811,7 @@ sendButMessage(from, `${mana}`, `© adyy`, [
           {
             buttonId: `sc`,
             buttonText: {
-              displayText: `SC BOT`,
+              displayText: `OWNER`,
             },
             type: 1,
           },
