@@ -809,7 +809,7 @@ sendButMessage(from, `${mana}`, `adyy.bo tz`, [
             type: 1,
           },
           {
-            buttonId: `sc`,
+            buttonId: `owner`,
             buttonText: {
               displayText: `OWNER`,
             },
